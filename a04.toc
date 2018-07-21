@@ -1,0 +1,21 @@
+\contentsline {chapter}{\numberline {1}Infrastructure}{1}
+\contentsline {subsection}{\numberline {1.0.1}Not predicate}{2}
+\contentsline {section}{\numberline {1.1}Getting a line of input from stdin}{2}
+\contentsline {section}{\numberline {1.2}Chunks}{3}
+\contentsline {subsection}{\numberline {1.2.1}Whitespace}{3}
+\contentsline {subsection}{\numberline {1.2.2}Recognizing Letters}{4}
+\contentsline {subsection}{\numberline {1.2.3}Words}{4}
+\contentsline {subsection}{\numberline {1.2.4}Numerals}{5}
+\contentsline {subsection}{\numberline {1.2.5}Punctuation}{5}
+\contentsline {subsection}{\numberline {1.2.6}Defunkification}{6}
+\contentsline {subsection}{\numberline {1.2.7}Putting the chunks together}{7}
+\contentsline {chapter}{\numberline {2}The Fourth Chamber: Existential Quantification and Predication}{9}
+\contentsline {section}{\numberline {2.1}Grammar}{10}
+\contentsline {section}{\numberline {2.2}Compiling to Horn Clauses}{10}
+\contentsline {subsection}{\numberline {2.2.1}Skolemization}{10}
+\contentsline {subsubsection}{Nute-Covington Transform}{11}
+\contentsline {section}{\numberline {2.3}Compling for query}{11}
+\contentsline {subsection}{\numberline {2.3.1}Lloyd-Topor Transform}{11}
+\contentsline {section}{\numberline {2.4}Dialog}{12}
+\contentsline {section}{\numberline {2.5}Theorem Prover}{13}
+\contentsline {chapter}{Bibliography}{15}

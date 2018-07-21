@@ -1,0 +1,106 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1.1}Why all these chambers??}{2}
+\contentsline {section}{\numberline {1.2}Why are your programs half-baked?}{2}
+\contentsline {section}{\numberline {1.3}Why are you using Prolog instead of (insert favorite language here)}{3}
+\contentsline {section}{\numberline {1.4}Why don't you make the programs downloadable?}{4}
+\contentsline {chapter}{\numberline {2}The First Chamber: Prolog}{5}
+\contentsline {section}{\numberline {2.1}Variables}{5}
+\contentsline {section}{\numberline {2.2}Read-Eval-Print Loop}{6}
+\contentsline {section}{\numberline {2.3}Unification}{7}
+\contentsline {section}{\numberline {2.4}Numerical Computations}{8}
+\contentsline {section}{\numberline {2.5}Relations}{8}
+\contentsline {subsection}{\numberline {2.5.1}Some cautions}{10}
+\contentsline {section}{\numberline {2.6}The Grandfather Clause}{11}
+\contentsline {section}{\numberline {2.7}Rules}{12}
+\contentsline {section}{\numberline {2.8}Counting and Recursion}{15}
+\contentsline {section}{\numberline {2.9}Skeletons and Techniques}{16}
+\contentsline {subsection}{\numberline {2.9.1}Self-Modifying Code}{18}
+\contentsline {chapter}{\numberline {3}The Second Chamber: Tokenization and Parsing}{21}
+\contentsline {section}{\numberline {3.1}Getting a line of input from stdin}{21}
+\contentsline {section}{\numberline {3.2}Chunks}{22}
+\contentsline {subsection}{\numberline {3.2.1}Whitespace}{22}
+\contentsline {subsection}{\numberline {3.2.2}Recognizing Letters}{23}
+\contentsline {subsection}{\numberline {3.2.3}Words}{23}
+\contentsline {subsection}{\numberline {3.2.4}Numerals}{24}
+\contentsline {subsection}{\numberline {3.2.5}Punctuation}{24}
+\contentsline {subsection}{\numberline {3.2.6}Defunkification}{25}
+\contentsline {subsection}{\numberline {3.2.7}Putting the chunks together}{26}
+\contentsline {chapter}{\numberline {4}The Third Chamber: Grammars for Natural Language}{27}
+\contentsline {section}{\numberline {4.1}Formulating a grammar for blocks world}{29}
+\contentsline {section}{\numberline {4.2}Parse Trees}{30}
+\contentsline {subsection}{\numberline {4.2.1}Debugging: Printing out the Parse Trees}{31}
+\contentsline {chapter}{\numberline {5}The Fourth Chamber: Existential Quantification and Predication}{33}
+\contentsline {section}{\numberline {5.1}Logical form}{34}
+\contentsline {section}{\numberline {5.2}Enhancing the Lexicon for Semantics}{34}
+\contentsline {section}{\numberline {5.3}Syntax semantics interface}{35}
+\contentsline {section}{\numberline {5.4}Compiling to Horn Clauses}{35}
+\contentsline {subsubsection}{Compiling for Assertion}{36}
+\contentsline {section}{\numberline {5.5}Compling for query}{36}
+\contentsline {section}{\numberline {5.6}Dialog}{36}
+\contentsline {section}{\numberline {5.7}Theorem Prover}{37}
+\contentsline {chapter}{\numberline {6}The Fifth Chamber: Dialog and Database Update}{39}
+\contentsline {section}{\numberline {6.1}Problems to Solve}{39}
+\contentsline {section}{\numberline {6.2}Grammar}{40}
+\contentsline {section}{\numberline {6.3}Parse Tree to Semantics}{40}
+\contentsline {section}{\numberline {6.4}Compiling to Horn Clauses}{41}
+\contentsline {subsection}{\numberline {6.4.1}Theorem Prover}{42}
+\contentsline {subsection}{\numberline {6.4.2}Updating the Database}{43}
+\contentsline {section}{\numberline {6.5}The Maxim of Minimum Mutilation}{44}
+\contentsline {section}{\numberline {6.6}Dialog}{46}
+\contentsline {chapter}{\numberline {7}The Sixth Chamber: Conjunction}{49}
+\contentsline {section}{\numberline {7.1}Changes to the Parser}{49}
+\contentsline {section}{\numberline {7.2}Why we can't use unification}{50}
+\contentsline {section}{\numberline {7.3}Lambda Calculus}{50}
+\contentsline {section}{\numberline {7.4}Developing Alpha Conversion and Beta Conversion using Skeletons and Techniques}{50}
+\contentsline {subsection}{\numberline {7.4.1}Syntax of Lambda Expressions}{50}
+\contentsline {subsection}{\numberline {7.4.2}Bound Variables}{51}
+\contentsline {subsection}{\numberline {7.4.3}Alpha Conversion}{52}
+\contentsline {subsection}{\numberline {7.4.4}Free Variables}{53}
+\contentsline {subsection}{\numberline {7.4.5}Alphabetic Variants}{55}
+\contentsline {subsection}{\numberline {7.4.6}Beta Conversion}{55}
+\contentsline {section}{\numberline {7.5}Changes to the Syntax/Sematics Interface}{58}
+\contentsline {section}{\numberline {7.6}Changes to the Lexicon}{59}
+\contentsline {section}{\numberline {7.7}debugging}{59}
+\contentsline {section}{\numberline {7.8}dialog}{60}
+\contentsline {chapter}{\numberline {8}The Seventh Chamber: Disjunction}{61}
+\contentsline {section}{\numberline {8.1}Grammar}{61}
+\contentsline {section}{\numberline {8.2}The problem of representing disjunctive information in prolog}{62}
+\contentsline {section}{\numberline {8.3}Inference Engine}{63}
+\contentsline {section}{\numberline {8.4}Lloyd-Topor Transform}{68}
+\contentsline {section}{\numberline {8.5}Compiling}{68}
+\contentsline {section}{\numberline {8.6}Maxim of Minimum Mutilation}{70}
+\contentsline {chapter}{\numberline {9}The Eight Chamber: Conjunction and Disjunction}{75}
+\contentsline {section}{\numberline {9.1}Syntax}{75}
+\contentsline {section}{\numberline {9.2}Semantics}{76}
+\contentsline {chapter}{\numberline {10}The Ninth Chamber: Universal Quantification}{77}
+\contentsline {section}{\numberline {10.1}Hole Semantics}{77}
+\contentsline {section}{\numberline {10.2}lexicon}{82}
+\contentsline {chapter}{\numberline {11}The Tenth Chamber: Negation}{87}
+\contentsline {chapter}{\numberline {12}The Eleventh Chamber: Equality and Functions}{89}
+\contentsline {chapter}{\numberline {13}The Twelfth Chamber: Prepositional Phrases}{91}
+\contentsline {chapter}{\numberline {14}The Thirteenth Chamber: Building a better NP}{93}
+\contentsline {chapter}{\numberline {15}The Fourteenth Chamber: Building a better VP}{95}
+\contentsline {chapter}{\numberline {16}The Fifteenth Chamber: Neo-Davidsonian Events}{97}
+\contentsline {chapter}{\numberline {17}The Sixteenth Chamber: Cause, Effect, and The Frame Problem}{99}
+\contentsline {chapter}{\numberline {18}The Seventeenth Chamber: The Subjunctive Mood}{101}
+\contentsline {chapter}{\numberline {19}The Eigthteenth Chamber: Tense}{103}
+\contentsline {chapter}{\numberline {20}The Nineteenth Chamber: Pronouns and Anaphora}{105}
+\contentsline {chapter}{\numberline {21}The Twentyeth Chamber: Numbers and Plurals}{107}
+\contentsline {chapter}{\numberline {22}The Twenty-firstChamber: Spatial Reasoning}{109}
+\contentsline {chapter}{\numberline {23}The Twenty-second Chamber: Planning}{111}
+\contentsline {chapter}{\numberline {24}The Twenty-third Chamber: Belief}{113}
+\contentsline {chapter}{\numberline {25}The Twenty-fourth Chamber: Multiple Agents}{115}
+\contentsline {chapter}{\numberline {26}The Twenty-fifth Chamber: Degrees of Belief}{117}
+\contentsline {chapter}{\numberline {27}The Twenty-sixth Chamber: Presupposition}{119}
+\contentsline {chapter}{\numberline {28}The Twenty-seventh Chamber: Conversational Implicature}{121}
+\contentsline {chapter}{\numberline {29}The Twenty-eighth Chamber: Natural Lanugae Generation}{123}
+\contentsline {chapter}{\numberline {30}The Twenty-eighth Chamber: Dialog}{125}
+\contentsline {chapter}{\numberline {31}The Twenty-ninth Chamber: }{127}
+\contentsline {chapter}{\numberline {32}The Thirtyeth Chamber: }{129}
+\contentsline {chapter}{\numberline {33}The Thirty-first Chamber: }{131}
+\contentsline {chapter}{\numberline {34}The Thirty-second Chamber: }{133}
+\contentsline {chapter}{\numberline {35}The Thirty-third Chamber: }{135}
+\contentsline {chapter}{\numberline {36}The Thirty-fourth Chamber: }{137}
+\contentsline {chapter}{\numberline {37}The Thirty-fifth Chamber: }{139}
+\contentsline {chapter}{\numberline {38}The Thirty-sixth Chamber: }{141}
+\contentsline {chapter}{Bibliography}{143}

@@ -1,0 +1,844 @@
+s = not true(s)
+
+true(X) <=> X.
+
+s = not true(s)
+
+s <-> s
+
+s <-> not true(s)
+
+s <-> not s
+
+
+or(a,
+   and(b,
+       and(or(c,
+              d),
+           e))).
+
+there,is,a,red,block,or,a,green,or,blue,table]
+
+L1 = or(exists(sk2, and(or(and(blue(sk2), table(sk2)), and(green(sk2), table(sk2))), true)), exists(sk1, and(and(red(sk1), block(sk1)), true))),
+L2 = [dial(sk3, 1), dial(sk3, 2), dial(sk4, 1), dial(sk4, 2), (blue(sk2):-dial(sk4, 1), dial(sk3, 1)), (table(sk2):-dial(sk4, 1), dial(sk3, 1)), (green(sk2):-dial(sk4, 2), dial(sk3, 1)), (table(sk2):-dial(sk4, 2), dial(sk3, 1)), (red(sk1):-dial(sk3, 2)), (block(sk1):-dial(sk3, 2))] .
+
+
+
+
+                or
+             1/    \
+            a       and
+                   /   \    
+                  b     or 
+                      2/  \3
+                     c    and 
+                         /   \
+                        d     e
+
+
+So when we back up to the OR nodes, we need two things:
+
+1.  a list of all of the dial values which are down that branch
+
+2.  a list of all of the atomic formlas which should be conditional on those
+    dial values
+
+So backing up to an and node, we just append the atmoic formlas together
+We also append the dial values together
+
+
+
+
+
+So the problem is if we do the cnf as not cnf but as a bunch of dials,
+we have to face the problem of incompatable dial values head-on.
+
+I really don't like this.  Its just not so cool as completely orthogonal 
+dial values.  Its just not.
+
+There isn't anything else here.
+
+
+every man loves a woman
+
+woman(skw). 
+loves(X,skw) :- man(X).
+
+or
+
+woman(skw(X)) :-man(X).
+loves(X,skw(X)) :- man(X). 
+-----------------------------------------
+
+woman(skw)   :- dial(skd,1). 
+loves(X,skw) :- dial(skd,1), man(X).
+
+
+woman(skw(X))   :- dial(skd,2), man(X).
+loves(X,skw(X)) :- dial(skd,2), man(X). 
+
+
+-----------------------------------------
+
+or(or(1,2), 
+   or(and(or(4,5),
+          and(6,7)),
+      and(7,8)))
+-----------------------------------------
+
+or(1,2) :-   dial(sk1,1).
+
+or(and(or(4,5),
+       and(6,7)),
+   and(7,8)) :- dial(sk1,2).
+
+-----------------------------------------
+
+       1 :-   dial(sk2,1), dial(sk1,1).
+       2 :-   dial(sk2,2), dial(sk1,1).
+
+
+  and(or(4,5) 
+      and(6,7)):- dial(sk3,1), dial(sk1,2).
+
+  and(7,8) :- dial(sk3,2), dial(sk1,2).
+
+-----------------------------------------
+
+1 :-   dial(sk2,1), dial(sk1,1).
+2 :-   dial(sk2,2), dial(sk1,1).
+
+
+or(4,5) :- dial(sk3,1), dial(sk1,2).
+and(6,7):- dial(sk3,1), dial(sk1,2).
+
+7 :- dial(sk3,2), dial(sk1,2).
+8 :- dial(sk3,2), dial(sk1,2).
+
+-----------------------------------------
+
+
+1 :-   dial(sk2,1), dial(sk1,1).
+2 :-   dial(sk2,2), dial(sk1,1).
+
+
+4 :- dial(sk4,1), dial(sk3,1), dial(sk1,2).
+5 :- dial(sk4,2), dial(sk3,1), dial(sk1,2).
+
+6:- dial(sk3,1), dial(sk1,2).
+7:- dial(sk3,1), dial(sk1,2).
+
+7 :- dial(sk3,2), dial(sk1,2).
+8 :- dial(sk3,2), dial(sk1,2).
+
+
+-----------------------------------------
+
+
+alkdsjf;alkdsfj;alsfdkj
+
+
+or-disjunctive information what  could we do here.
+
+
+you need a way to make sure that we've gotten all of the
+hypotheticals.
+
+dials?  are dials the answer?
+
+a block is green or red.
+
+block(sk1), or([green(sk1), red(sk1)]]
+
+
+If we give a name to the or:
+
+sk_or([1,2]).
+
+and then say that each one of these are there:
+
+its pretty durn straightforward--all you need to do is make sure
+that you can assume these things and that you can know when a set
+of residues hits up all of the elements.
+
+so if you store them as:
+
+assumable(sk_or, green(sk1)).
+
+would that work????
+
+Yes i think that would work....hmmm...intreging....
+
+So it would work like this,
+
+prove(X,R,[X|R]) :-
+	 assumable(N,X),
+         not (member(Y,R), assumable(N,Y)).
+
+
+How could we, given a list of Rss, find out whether
+we've hit all of them every time?
+
+
+
+a :- (b or c).
+
+a :- (d or e or f).
+
+b.
+c.
+d.
+e.
+
+prove(a, [[b],[c],[d],[e]]).
+
+what do you want to do here???????
+
+-------
+
+mmmmmmmmmm_update of disjunctive databases.
+
+
+What gives?
+
+Nothing really lasts more than 20 years.  Otherwise, it is really the end.
+
+
+a b c [d e] 
+
++ 
+
+  [d]
+
+hmmmm.....
+
+But the wierderestest part....
+
+[
+a(sk1) :- n=1
+b(sk1) :- n=1
+
+c(sk1) :- n=2
+
+d(sk1) :- n=3
+]
+
+b(sk2).
+
+............
+
+Now, i get in
+
+(Ex) b(x)
+
+what do-eth I doth???
+
+There is a green block.
+
+There is a block which is green or there is a table which is red.
+
+
+SooooOOOoooOOOoOoooOOo
+
+what is fundamental, the minimizing of your theory or the
+minimuisizin of your mutilatoin?
+
+It would have to be the minimization of the theory, no?
+yes, I guess that would be true.
+
+so we want the smallest theory which will imply the truth of
+all of the sentences we've seen thusly far.
+
+
+There is a green block.
+There is a green block or a red table.
+
+Seem like we must be talking about a new block, not 
+equivocating on it.  Right now, we've introduced no methods of
+equivocation.
+
+If we really are interested in makeing _all_ the
+sentences we've heard so far true, there's to be  no
+thought of ever reducing a disjunct, now is there?
+
+I mean, really there's no difference betwee:
+
+
+There is a green block.
+There is a green block or a red table.
+
+and
+
+There is a green block or a red table.
+There is a green block.
+
+Ja?
+
+
+Well, what about:
+
+The block that is red or green is green.
+
+So once again we have a distinction between assertion and
+query.
+
+or maybe we shouldn't fear the pragmatics.  Perhaps now is really
+the time to introduce these other words?
+
+there is a green block.
+there is a red or green block.  -> no change.
+there is another block which is red or green.
+
+there is a green block.
+another block is red or green.
+
+There is a flirt, a girl, chanteuse,
+there is a naughty girl.
+a girl whose morals, very lose,
+have brightend up my world.
+
+thank god for wenches, who will sell
+their bodies to old men,
+who otherwise would be in hell,
+to have a girl again.
+
+What should we do here?  
+
+the block is red or green.
+the block is green.
+
+ok, here is the score.  Relentlessly, we choose the smallest model
+which will imply the sentences.
+
+The block is red => the block is red or green.
+
+ergo, if we get either:
+
+the block is red.
+the block is red or green.
+
+we just have a single model, a red block.
+
+Relentlesly.  These are very stilted situations.  Right now,
+minimizing the resulting model is our _only_ pragmatic consideration.
+
+well it totally depends upon what you mean by "imply".
+
+If we have a 3 value logic of "yes, no, maybe" then perhaps
+there's a different answer.
+
+There is a red or a green block.
+> is there a green block?  maybe.
+There is a red block.
+> is there a green block?  ????
+
+if we want the answer to still be maybe, then
+we want to make two blocks, one red and one green.
+
+Would this be like the principle of modal charity, or what?
+We always assume, as far as possible, that peoples arn't
+contradicting themselves, and are always increasing the number
+of possible worlds????
+
+But then there would be no non-contradictory way of interpreting
+"the block that is red or green is red.
+
+In point of fact, say there's only 3 colors, red, green, and blue.
+
+sahying that sk1 is a block is quite the same thing as saying
+sk1 is either red, green, or blue, because every block has a color.
+
+Fascinating......this is a very good way of looking at it.
+
+yeah, forget about modal charity.    :-)
+
+
+The block is red xor green.
+The block is red xor blue.
+
+The block is red.  ha!  They _both_ should go away!!!!!!!!
+
+___Relentlessly__ persue the minimum sized model.  in fact, they
+should go away when the 2nd sentence is processed.
+
+
+The block is red xor green xor yellow.
+The block is red xor blue xor yellow.
+
+yeah, the obvious answer here is that the result should be:
+
+The block is red xor yellow.
+
+__Relentlessly__ persue the miinimum sized model.  the principle of
+charity is our only pragmatic virtue here.
+
+So.....in summary...
+
+[a b c] is compatible with [a]    yeilding [a]
+
+[a b c] is compatible with [a b]   yeilding [a b]
+
+[a b c] is compatible with [b c d]   yeilding [b c]
+
+
+----
+
+
+The question is:  is there sense in seperating out the
+clauses from the xors.  Well, what is the next step here?
+You are going to do what, match up the disxuncts?
+
+block(sk1) [[wooden(sk1), green(sk1)], [red(sk1)]]
+
+block(sk1), red(sk1).
+
+
+So the first thing you have to do is realize whether we
+should represent these all as the same kinda thang...
+
+we will be having....horn clausen here as well....
+
+
+{ [[block(sk1)]], [[wooden(sk1), green(sk1)], [red(sk1)]] }
+
+This actually would work.  In fact, we could coalesce all of the
+atomic facts into one of these disjuncts.....
+
+[X]-{[[block(X),red(X)]]}
+
+=>
+
+{ [[block(sk1),red(sk1)]]  }
+
+
+It would pretty much have to be, no?  Or am I totally and completely
+wrong about it?
+
+
+So is the thought the following:
+
+
+you go to every one of the disxunts, and you see if the assignment is
+commpatible with it.
+
+an assignment is compatible with a disunct if it is noncontradictory with at
+least one of its components.
+
+
+Ok, we need names:
+
+cxf:  [xor1  xor2  xor3]
+
+xord = [disxunct disxunt...]
+
+One of them has to be true.
+
+So there are two different phases:
+
+1.  compatiblity testing
+2.  finding the smalest one...
+
+so is it an nxm thaing?//
+
+{ [[block(sk1)]], [[wooden(sk1), green(sk1)], [red(sk1)]}}
+
+% the red block is wooden or plastic.
+[X]-{ [[block(X),red(X)]], [[wooden(X)],[plastic(X)]] }
+
+Yes I do think that is probably what is....perhaps.....
+
+man....this is rough....
+
+Looks like the only way to do it would be to just try all
+possible combinations of the switchs, eliminating 
+the incompatible ones....very evil.
+
+Not so bad.
+
+Here's the score.   man, how could I remotely police this?
+
+what you want to enforce is that there would be more than one
+method of doing this, but there's really not.
+
+For this present universe, where everything is ground, its
+realy to problem!!  Swching???
+
+But what about the case when there is going to not be so
+good?
+
+But what about the future?
+
+there is a red block.
+every block is green or red.
+there is a green block.
+
+{ [[block(sk1),red(sk1)]], [[green(X), not block(X)], [red(X), not block(X)]]}
+
+Looks like it will be ok.  Looks like you can just do an nxm comparison
+of each new xor with all previous xors.
+
+wow dude....I think you'll hae relaly done it...
+not so fast :-(  I mean, the above will still wor, but the simplification of
+
+[[block(sk1),red(sk1)]]
++
+{ [[green(X), not block(X)], [red(X), not block(X)]]}
+
+would be:
+
+
+
+{ [[block(sk1)]], [[red(X), not block(X)]]}
+
+because a red block would rule out a world where alll blocks
+were green.
+
+So what would be an apropos world for:
+
+there is a red block.
+there is a green block.
+every block is red or green.
+
+
+
+easy:
+
+[block(sk1),block(sk2),red(sk1),green(sk2), [not block(Y), red(Y),green(Y)]]
+
+:-P
+
+the thing is if you _really_ want these worlds to be independent and
+mutually exclusive of each other....hmmmm...I really need to read poole.
+
+The block is green or red.
+
+block(sk1),  red(sk1) :- dial(c,1), green(sk1) :- dial(c,2).
+
+every block is green or red.
+
+for each block, there is a seperate dial, saying which
+it is, green or red.
+
+
+red(X)   :-  block(X), dial(c(X),1).
+green(X) :-  block(X), dial(c(X),2).
+
+there is a red block.
+
+block(sk1), red(sk1).
+
+there is a red block or a green table.
+
+There are no blocks.
+
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+Ok, hear ye, hear ye!
+
+
+CNF.
+
+There are 3 possiblities:
+
+1.  A clause consists entirely of negated literals. 
+
+2.  A clause consists entirely of horn clauses.
+
+3.  A clause consists of non horn clauses.
+
+
+Example:
+---------
+
+There is a red block.
+There is a green block.
+Every block is red or green.
+
+block(sk1),red(sk1). block(sk2),green(sk2).  [red(X), green(X), not block(X)]
+
+step #1: hornify by assumtions the non horn clause.
+
+
+block(sk1).
+block(sk2).
+
+red(sk1). 
+green(sk2).
+
+red(X)   :-  block(X), dial(c(X),1).
+green(X) :-  block(X), dial(c(X),2).
+
+Step #2: disjointify the ground instances.   Easiest way to do this
+is just to not have the corresponding ground instances for the
+variables!!
+
+block(sk1).
+block(sk2).
+
+red(sk1). 
+red(X)   :-  X\=sk1,X\=sk2, block(X), dial(c(X),1).
+
+green(sk2).
+green(X) :-  X\=sk1,X\=sk2, block(X), dial(c(X),2).
+
+parblum:  how do I know that the we need to put more gismos
+in from of those rules????  Basicaly, you'll have to find out
+whick objects already obey the rule, and exclude them from
+the "value added" of the sentence.  
+
+Notice, a natural locus for this wouldn't be these clauses, however,
+it would be on the dial predicate:
+
+dial(C(X),1) :- X\=sk1, x\=sk2.
+
+What about the other way?
+
+every block is red or green.
+there is a red block.
+there is a green block.
+
+-------------------------------------------------
+
+[[a,-b,-c], [a,e], [b,e], [c]]
+
+a :- b,c.
+
+a :- dial(d1,1).
+e :- dial(d1,2).
+
+b :- dial(d2,1).
+e :- dial(d2,2).
+
+b :- dial(d2,3).
+e :- dial(d2,3).
+
+c.
+
+So is there really any problem here???  Why wouldn't this just do it?
+Actually, it probably would.
+
+What _could_ cause problems?
+
+Well, are you just tryign to solve the problem of finding out what
+is the best way to do it, or are you also trying to solve the problem
+of probabilitstic horn clause as well?  
+
+Solving the problem of probabilstic horn clauses would be ultra-groovey,
+because then we could get this really to work out great.
+
+So what could possibly go wrong???
+
+Are the assumables not unifying with any of the heads?  Well, the only
+possibllity would be
+
+a :- b,c and 
+a :- dial(d1,1).
+
+are the bodies of the clauses mutually exlusive???  Umm....yes....
+
+Here I suppose it might be good to de-dialify it....
+
+a :- dial(d1,2), b,c.  -- would that work????
+
+Yeah, its hard to se what would be the best way, however, because
+we just wouldn't know what to do with all of this other stuff..
+
+Its easy to see how to do it if we have nothing like the following.
+however, what should we do if there's more to it than this?  perhaps we
+couldnt even make it work....
+
+It should be _always_ possible to make this work, no?
+
+I mean,  horn clause theories, even restricted under mutually
+exlusive clauses, should be there, no?
+
+Actually, the above _was the trick he was talking about, no?  Yeah, I guess..
+
+Why not?  Perhaps there's more to it than this....
+
+....
+
+Ok, back to some examples.
+
+There is a red block.
+
+There is a block which is red or green.
+
+Yeah, there's representing it, and there updating the representation, eh?
+
+grrr....I can't take it any more!!!!!
+
+
+there is a block which is red or green.
+
+
+red(sk1)   :- dial(d1,1).
+green(sk1) :- dial(d1,2).
+
+This should be Ok, because your code to gather these formulas
+from the database should be there as well, no?
+
+Yeah, going from the dial representation to the clause representation is
+a lossless transform.
+
+Dude, you should be able to make this work.  Holy cow.
+
+Does this xormal form any longer have relevance???  Well sure,
+this is where the dials come from after all....
+
+
+[a,b, -c,-d,-e] ==> [[[a],-c,-d,-e],[[b],-c,-d,-e], [[a,b], -c,-d,-e]]
+
+
+Yeah, this is a wierd thing you're doing.  the point isn't necessarily
+to maintain strick logical coherence, the point is to maintain a
+good conversation.
+
+God I hope it works.
+
+
+[red(X), green(X), not block(X)]  =>
+
+So when you're cheking this for covering instances:
+[[red(X), not block(X)], [green(X), not block(X)]]
+
+you should gather the X's which are already covered,
+and exclude them from the dials.  As simple as that eh?/
+
+Yeah.
+
+
+--------------------------
+
+alksdjf;laksdjf;alkdsjf;lkadjfs;lkajdsf;ksajf
+
+Lets get this horn approximtion thing going once and for all.
+
+[a(X), b(Y), not c(X,Y)]
+
+
+What should I do with this sort of thing???
+
+ooo ooo ooo negation as failure!!!!
+
+
+a(X) :- c(X,Y), not b(Y)
+
+
+every block is green or red.
+
+
+forall(X, implies(block(X), or(green(X), red(X))))
+
+
+green(X) :- block(X), not red(X).
+red(X)   :- block(X), not green(X).
+
+
+Really, this is the missing link.
+
+What would this do about this:
+
+green(sk1).
+block(sk1).
+
+green(X) :- dial(dsk(X),1), block(X), not red(X).
+red(X)   :- dial(dsk(X),2), block(X), not green(X).
+
+This really doens't force any particular value for the
+dial, no?
+
+right!!!  the "not green(X)" provides an escape route!!!
+we shouldn't be doing abduction during negation as failure
+(a lesson learned the hard way back in the 90's)
+
+in other words, we can still prove "red(sk1)" by 
+exhaustive search over all possible worlds.
+
+This should dramatically simplify mmm_update, because we no
+longer have to do update the dials to eliminate anything.
+
+Notice this quite gives the wff guys fits, thogh, because
+it is no longer possible to stratify the clauses...
+
+its ok though, because of the mutual exlusivity of the dials.
+
+---
+
+Does this help us with partially shared variables?
+
+a(X,Y),  b(Y,Z), c(Z,W), not d(X,Y,Z).
+
+
+a(X,Y) :-  d(X,Y,Z), not b(Y,Z), not c(Z,W).
+
+b(Y,Z) :-  d(X,Y,Z), not c(Z,W), not a(X,Y).
+
+c(Z,W) :-  d(X,Y,Z), not a(X,Y), not b(Y,Z).
+
+
+Well, honestly, it doesn't really help.
+But it would help with mmmupdate...
+
+Actually, why wouldn't this just be a comprehensive solution to your problem?
+As long as we can arrange the clauses such that things are ground at the
+
+apropos time, we're golden!!
+
+You should try the sticle problem set....
+
+enough thinking, time to start programming :-)
+
+Hmmmmmnnnnnmmnmmnmnnnnnmmmm..........
+
+welll lets get going here....perhapsthere's more to the story than this....
+
+perhaps we can get this going and it will be coooooool
+
+
+EITHER every block is red OR every block is green.
+
+
+or(block(X) => red(X)
+
+
+and(or(implies(a,b),implies(a,c)),
+	
+
+
+Ok..... here's an example of why you need to multiply out
+the cornjunctions as well....
+
+[a ; b]  [not a ; not b]
+
+
+a :- dial(d,1).
+b :- dial(d,2).
+
+
+Not prove : [not a ; not b]
+
+This prove it.  What you need is the additional switch value:
+
+a :- dial(d,1).
+b :- dial(d,2).
+
+a :- dial(d,3).
+b :- dial(d,3).
+
+- - - - - - - -- - - -- 
+
+[a b, not c]
+
+[(a,not b) ; not c] xor [(b, not a) ; not c]  xor [(a,b) ; not c]
+
+
+Why don't you do something amazing and let other people explain
+how it works????  :-)
+
+good point.
+
+- - - -- - - - - - 
+
+

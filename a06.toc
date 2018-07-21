@@ -1,0 +1,32 @@
+\contentsline {chapter}{\numberline {1}Infrastructure for Sixth Chamber}{1}
+\contentsline {subsection}{\numberline {1.0.1}Not predicate}{2}
+\contentsline {section}{\numberline {1.1}Getting a line of input from stdin}{2}
+\contentsline {section}{\numberline {1.2}Chunks}{3}
+\contentsline {subsection}{\numberline {1.2.1}Whitespace}{3}
+\contentsline {subsection}{\numberline {1.2.2}Recognizing Letters}{4}
+\contentsline {subsection}{\numberline {1.2.3}Words}{5}
+\contentsline {subsection}{\numberline {1.2.4}Numerals}{5}
+\contentsline {subsection}{\numberline {1.2.5}Punctuation}{5}
+\contentsline {subsection}{\numberline {1.2.6}Defunkification}{6}
+\contentsline {subsection}{\numberline {1.2.7}Putting the chunks together}{7}
+\contentsline {section}{\numberline {1.3}Compling for query}{7}
+\contentsline {subsection}{\numberline {1.3.1}Lloyd-Topor Transform}{7}
+\contentsline {section}{\numberline {1.4}Compiling to Horn Clauses}{8}
+\contentsline {subsection}{\numberline {1.4.1}Updating the Database}{9}
+\contentsline {section}{\numberline {1.5}The Maxim of Minimum Mutilation}{9}
+\contentsline {section}{\numberline {1.6}Dialog}{11}
+\contentsline {section}{\numberline {1.7}Alpha and Beta Conversion Test Suite}{13}
+\contentsline {chapter}{\numberline {2}The Sixth Chamber: Conjunction}{17}
+\contentsline {section}{\numberline {2.1}Why we can't use unification}{17}
+\contentsline {section}{\numberline {2.2}Lambda Calculus}{17}
+\contentsline {section}{\numberline {2.3}Developing Alpha Conversion and Beta Conversion using Skeletons and Techniques}{17}
+\contentsline {subsection}{\numberline {2.3.1}Syntax of Lambda Expressions}{17}
+\contentsline {subsection}{\numberline {2.3.2}Bound Variables}{18}
+\contentsline {subsection}{\numberline {2.3.3}Alpha Conversion}{19}
+\contentsline {subsection}{\numberline {2.3.4}Free Variables}{20}
+\contentsline {subsection}{\numberline {2.3.5}Alphabetic Variants}{22}
+\contentsline {subsection}{\numberline {2.3.6}Beta Conversion}{22}
+\contentsline {section}{\numberline {2.4}Grammar}{23}
+\contentsline {subsection}{\numberline {2.4.1}Left Recursion}{23}
+\contentsline {subsection}{\numberline {2.4.2}Features and agreement}{24}
+\contentsline {chapter}{Bibliography}{27}

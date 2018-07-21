@@ -1,0 +1,35 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1.1}Why all these chambers??}{2}
+\contentsline {section}{\numberline {1.2}Why are your programs half-baked?}{2}
+\contentsline {section}{\numberline {1.3}Why are you using Prolog instead of (insert favorite language here)}{3}
+\contentsline {section}{\numberline {1.4}Why don't you make the programs downloadable?}{4}
+\contentsline {chapter}{\numberline {2}The First Chamber: Prolog}{5}
+\contentsline {section}{\numberline {2.1}Variables}{5}
+\contentsline {section}{\numberline {2.2}Read-Eval-Print Loop}{6}
+\contentsline {section}{\numberline {2.3}Unification}{7}
+\contentsline {section}{\numberline {2.4}Relations}{8}
+\contentsline {subsection}{\numberline {2.4.1}Some cautions}{9}
+\contentsline {section}{\numberline {2.5}The Grandfather Clause}{11}
+\contentsline {section}{\numberline {2.6}Rules}{12}
+\contentsline {section}{\numberline {2.7}Counting and Recursion}{12}
+\contentsline {section}{\numberline {2.8}Meta Interpreters}{13}
+\contentsline {section}{\numberline {2.9}Useful Prolog Warts}{13}
+\contentsline {subsection}{\numberline {2.9.1}Testing For Groundness}{13}
+\contentsline {subsection}{\numberline {2.9.2}Self-Modifying Code}{13}
+\contentsline {subsection}{\numberline {2.9.3}Testing whether variables are unified to each other}{13}
+\contentsline {subsection}{\numberline {2.9.4}Double Negation in order not to bind variables trick}{14}
+\contentsline {chapter}{\numberline {3}The Second Chamber: Tokenization and Parsing}{15}
+\contentsline {section}{\numberline {3.1}Getting a line of input from stdin}{15}
+\contentsline {section}{\numberline {3.2}Chunks}{16}
+\contentsline {subsection}{\numberline {3.2.1}Whitespace}{16}
+\contentsline {subsection}{\numberline {3.2.2}Recognizing Letters}{17}
+\contentsline {subsection}{\numberline {3.2.3}Words}{17}
+\contentsline {subsection}{\numberline {3.2.4}Numerals}{18}
+\contentsline {subsection}{\numberline {3.2.5}Punctuation}{18}
+\contentsline {subsection}{\numberline {3.2.6}Defunkification}{19}
+\contentsline {subsection}{\numberline {3.2.7}Putting the chunks together}{20}
+\contentsline {chapter}{\numberline {4}The Third Chamber: Grammars for Natural Language}{21}
+\contentsline {section}{\numberline {4.1}Formulating a grammar for blocks world}{23}
+\contentsline {section}{\numberline {4.2}Parse Trees}{24}
+\contentsline {subsection}{\numberline {4.2.1}Debugging: Printing out the Parse Trees}{25}
+\contentsline {chapter}{Bibliography}{27}

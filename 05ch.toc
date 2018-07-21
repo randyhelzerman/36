@@ -1,0 +1,33 @@
+\contentsline {chapter}{\numberline {1}Introductory Justifications}{1}
+\contentsline {section}{\numberline {1.1}Why arn't you covering language learning/statistical grammars?}{1}
+\contentsline {chapter}{\numberline {2}Running, Fixing, and Enhancing this Program}{3}
+\contentsline {section}{\numberline {2.1}SWI Prolog}{3}
+\contentsline {subsection}{\numberline {2.1.1}Declarations, etc}{3}
+\contentsline {subsection}{\numberline {2.1.2}Not predicate}{4}
+\contentsline {chapter}{\numberline {3}The First Chamber: Prolog}{5}
+\contentsline {chapter}{\numberline {4}The Second Chamber: Tokenization and Parsing}{7}
+\contentsline {section}{\numberline {4.1}Getting a line of input from stdin}{7}
+\contentsline {section}{\numberline {4.2}Chunks}{8}
+\contentsline {subsection}{\numberline {4.2.1}Whitespace}{8}
+\contentsline {subsection}{\numberline {4.2.2}Recognizing Letters}{9}
+\contentsline {subsection}{\numberline {4.2.3}Words}{9}
+\contentsline {subsection}{\numberline {4.2.4}Numerals}{10}
+\contentsline {subsection}{\numberline {4.2.5}Punctuation}{10}
+\contentsline {subsection}{\numberline {4.2.6}Defunkification}{11}
+\contentsline {subsection}{\numberline {4.2.7}Putting the chunks together}{12}
+\contentsline {chapter}{\numberline {5}The Third Chamber: Grammars for Natural Language}{13}
+\contentsline {section}{\numberline {5.1}Skeleton Grammar of English}{13}
+\contentsline {section}{\numberline {5.2}Reusing parts of the grammar}{13}
+\contentsline {chapter}{\numberline {6}The Fourth Chamber: Enabling Elementary Dialog}{15}
+\contentsline {section}{\numberline {6.1}Grammar}{16}
+\contentsline {section}{\numberline {6.2}Compiling to Horn Clauses}{16}
+\contentsline {subsection}{\numberline {6.2.1}Skolemization}{16}
+\contentsline {subsubsection}{Nute-Covington Transform}{17}
+\contentsline {section}{\numberline {6.3}Compling for query}{17}
+\contentsline {subsection}{\numberline {6.3.1}Lloyd-Topor Transform}{17}
+\contentsline {section}{\numberline {6.4}Dialog}{17}
+\contentsline {section}{\numberline {6.5}Theorem Prover}{18}
+\contentsline {chapter}{\numberline {7}The Fifth Chamber: Existential Quantification}{21}
+\contentsline {section}{\numberline {7.1}Problems to Solve}{21}
+\contentsline {section}{\numberline {7.2}Grammar}{22}
+\contentsline {chapter}{Bibliography}{23}

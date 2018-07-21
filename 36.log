@@ -1,0 +1,934 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  13 OCT 2014 14:50
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**36
+(./36.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 /
+     *
+? 
+Missing character: There is no / in font nullfont!
+Missing character: There is no * in font nullfont!
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--324
+[]
+ []
+
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+[1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+\epsfxsize=\dimen105
+\epsfysize=\dimen106
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks15
+\verbatim@line=\toks16
+\verbatim@in@stream=\read1
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2014/04/23 v1.8e multicolumn formatting (FMi)
+\c@tracingmulticols=\count89
+\mult@box=\box26
+\multicol@leftmargin=\dimen107
+\c@unbalance=\count90
+\c@collectmore=\count91
+\doublecol@number=\count92
+\multicoltolerance=\count93
+\multicolpretolerance=\count94
+\full@width=\dimen108
+\page@free=\dimen109
+\premulticols=\dimen110
+\postmulticols=\dimen111
+\multicolsep=\skip43
+\multicolbaselineskip=\skip44
+\partial@page=\box27
+\last@line=\box28
+\maxbalancingoverflow=\dimen112
+\mult@rightbox=\box29
+\mult@grightbox=\box30
+\mult@gfirstbox=\box31
+\mult@firstbox=\box32
+\@tempa=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\c@columnbadness=\count95
+\c@finalcolumnbadness=\count96
+\last@try=\dimen113
+\multicolovershoot=\dimen114
+\multicolundershoot=\dimen115
+\mult@nat@firstbox=\box50
+\colbreak@box=\box51
+\mc@col@check@num=\count97
+)
+\c@theorem=\count98
+\c@prop=\count99
+\c@axiom=\count100
+\c@definition=\count101
+\@indexfile=\write3
+\openout3 = `36.idx'.
+
+
+Writing index file 36.idx
+(./36.aux)
+\openout1 = `36.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+ (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count102
+\scratchdimen=\dimen116
+\scratchbox=\box52
+\nofMPsegments=\count103
+\nofMParguments=\count104
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count105
+\MPscratchDim=\dimen117
+\MPnumerator=\count106
+\makeMPintoPDFobject=\count107
+\everyMPtoPDFconversion=\toks18
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+[2
+
+
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 31.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 31.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 31.
+ [1] [2
+
+] [1] [2
+
+] (./36.toc)
+\tf@toc=\write4
+\openout4 = `36.toc'.
+
+ [3] [4
+
+]
+Chapter 1.
+[1
+
+]
+
+LaTeX Warning: Citation `teaching_prolog_book' on page 2 undefined on input lin
+e 155.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+Overfull \hbox (93.23044pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10 1.3.  WHY ARE YOU USING PROLOG INSTEAD OF (INSERT FAVORITE LAN
+GUAGE HERE) \OT1/cmr/m/n/10 3
+ []
+
+[3] [4]
+Chapter 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 248.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 248.
+[5
+
+] [6] [7] [8] [9] [10] [11] [12]
+Overfull \hbox (47.09793pt too wide) in paragraph at lines 650--655
+[]\OT1/cmr/m/n/10 Notice that the ``,'' which seper-ates be-gat(Parent,Kid) fro
+m be-gat(GrandParent,Parent)
+ []
+
+
+Overfull \hbox (7.49136pt too wide) in paragraph at lines 656--661
+[]\OT1/cmr/m/n/10 The first is dis-junc-tion. For ex-am-ple, if we had a re-la-
+tion called ``mother(X,Y)''
+ []
+
+[13] [14] [15]
+
+LaTeX Warning: Citation `lakhotia89' on page 16 undefined on input line 847.
+
+
+LaTeX Warning: Citation `naish96' on page 16 undefined on input line 848.
+
+
+LaTeX Warning: Citation `naish2000' on page 16 undefined on input line 851.
+
+[16] [17]
+Overfull \hbox (1.80617pt too wide) in paragraph at lines 950--957
+[]\OT1/cmr/m/n/10 Stepping back a minute to sum-ma-rize, the ``Skel-tons and Te
+ch-niques'' method
+ []
+
+[18] [19] [20
+
+]
+Chapter 3.
+
+LaTeX Warning: Citation `marcus93' on page 21 undefined on input line 1028.
+
+[21]
+Overfull \hbox (9.83415pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 22 \OT1/cmr/m/sl/10 CHAPTER 3.  THE SECOND CHAMBER: TOKENIZATIO
+N AND PARSING
+ []
+
+[22] [23]
+Overfull \hbox (9.83415pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 24 \OT1/cmr/m/sl/10 CHAPTER 3.  THE SECOND CHAMBER: TOKENIZATIO
+N AND PARSING
+ []
+
+[24] [25]
+Overfull \hbox (9.83415pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 26 \OT1/cmr/m/sl/10 CHAPTER 3.  THE SECOND CHAMBER: TOKENIZATIO
+N AND PARSING
+ []
+
+[26]
+Chapter 4.
+[27
+
+]
+Overfull \hbox (7.96358pt too wide) in paragraph at lines 1368--1371
+\OT1/cmr/m/n/10 yields a non-grammatical sen-tence. Again, we're just re-ly-ing
+ on our pre-theoretical
+ []
+
+
+Overfull \hbox (46.63861pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 28 \OT1/cmr/m/sl/10 CHAPTER 4.  THE THIRD CHAMBER: GRAMMARS FOR
+ NATURAL LANGUAGE
+ []
+
+[28] [29]
+Underfull \vbox (badness 1024) has occurred while \output is active []
+
+
+Overfull \hbox (46.63861pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 30 \OT1/cmr/m/sl/10 CHAPTER 4.  THE THIRD CHAMBER: GRAMMARS FOR
+ NATURAL LANGUAGE
+ []
+
+[30] [31]
+Overfull \hbox (46.63861pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 32 \OT1/cmr/m/sl/10 CHAPTER 4.  THE THIRD CHAMBER: GRAMMARS FOR
+ NATURAL LANGUAGE
+ []
+
+[32
+
+]
+Chapter 5.
+[33]
+Overfull \hbox (120.45822pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 34 \OT1/cmr/m/sl/10 CHAPTER 5.  THE FOURTH CHAMBER: EXISTENTIAL
+ QUANTIFICATION AND PREDICATION
+ []
+
+[34]
+Overfull \hbox (57.80527pt too wide) in paragraph at lines 1662--1667
+\OT1/cmr/m/n/10 "A block is blue" and "is a block blue?" both get trans-lated i
+nto "ex-ists(X,block(X),blue(X))".
+ []
+
+[35]
+Overfull \hbox (120.45822pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 36 \OT1/cmr/m/sl/10 CHAPTER 5.  THE FOURTH CHAMBER: EXISTENTIAL
+ QUANTIFICATION AND PREDICATION
+ []
+
+[36] [37]
+Overfull \hbox (120.45822pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 38 \OT1/cmr/m/sl/10 CHAPTER 5.  THE FOURTH CHAMBER: EXISTENTIAL
+ QUANTIFICATION AND PREDICATION
+ []
+
+[38
+
+]
+Chapter 6.
+[39]
+Overfull \hbox (13.86082pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 40 \OT1/cmr/m/sl/10 CHAPTER 6.  THE FIFTH CHAMBER: DIALOG AND D
+ATABASE UPDATE
+ []
+
+[40]
+
+LaTeX Warning: Citation `rorty2000' on page 41 undefined on input line 1935.
+
+[41]
+
+LaTeX Warning: Citation `monk' on page 42 undefined on input line 1961.
+
+
+Overfull \hbox (13.86082pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 42 \OT1/cmr/m/sl/10 CHAPTER 6.  THE FIFTH CHAMBER: DIALOG AND D
+ATABASE UPDATE
+ []
+
+[42] [43]
+Overfull \hbox (2.25056pt too wide) in paragraph at lines 2059--2064
+\OT1/cmr/m/n/10 For each of the new existentially-quantified vari-ables, we hav
+e to make a decision--
+ []
+
+
+Overfull \hbox (13.86082pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 44 \OT1/cmr/m/sl/10 CHAPTER 6.  THE FIFTH CHAMBER: DIALOG AND D
+ATABASE UPDATE
+ []
+
+[44]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45]
+Overfull \hbox (13.86082pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 46 \OT1/cmr/m/sl/10 CHAPTER 6.  THE FIFTH CHAMBER: DIALOG AND D
+ATABASE UPDATE
+ []
+
+[46] [47]
+Overfull \hbox (13.86082pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 48 \OT1/cmr/m/sl/10 CHAPTER 6.  THE FIFTH CHAMBER: DIALOG AND D
+ATABASE UPDATE
+ []
+
+[48
+
+]
+Chapter 7.
+
+LaTeX Warning: Citation `allen' on page 49 undefined on input line 2237.
+
+[49]
+Overfull \hbox (2.61458pt too wide) in paragraph at lines 2296--2296
+[]\OT1/cmr/bx/n/14.4 Developing Al-pha Con-ver-sion and Beta Con-
+ []
+
+[50]
+Overfull \hbox (181.98184pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10 7.4.  DEVELOPING ALPHA CONVERSION AND BETA CONVERSION USING SK
+ELETONS AND TECHNIQUES \OT1/cmr/m/n/10 51
+ []
+
+[51] [52]
+Overfull \hbox (181.98184pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10 7.4.  DEVELOPING ALPHA CONVERSION AND BETA CONVERSION USING SK
+ELETONS AND TECHNIQUES \OT1/cmr/m/n/10 53
+ []
+
+[53] [54]
+Overfull \hbox (181.98184pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10 7.4.  DEVELOPING ALPHA CONVERSION AND BETA CONVERSION USING SK
+ELETONS AND TECHNIQUES \OT1/cmr/m/n/10 55
+ []
+
+[55]
+Overfull \hbox (18.82077pt too wide) in paragraph at lines 2618--2618
+[]\OT1/cmtt/m/n/9 expression(2,some(X,and(man(X),(P^some(X,and(woman(X),P*X)))*
+(Y^love(X,Y)))),[] 
+ []
+
+
+Overfull \hbox (4.64594pt too wide) in paragraph at lines 2633--2633
+[]\OT1/cmtt/m/n/9 % Reduction of inner expression leaving outer function, with 
+var y shared.[] 
+ []
+
+[56]
+Overfull \hbox (18.82077pt too wide) in paragraph at lines 2675--2675
+[]\OT1/cmtt/m/n/9 expression(16,(((A^(B^some(C,and((A*C),(B*C)))))*(D^boxer(D))
+)*(D^sleep(D))),[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (181.98184pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10 7.4.  DEVELOPING ALPHA CONVERSION AND BETA CONVERSION USING SK
+ELETONS AND TECHNIQUES \OT1/cmr/m/n/10 57
+ []
+
+[57]
+Underfull \vbox (badness 3417) has occurred while \output is active []
+
+ [58]
+[59] [60]
+Chapter 8.
+[61
+
+] [62] [63] [64] [65] [66]
+Overfull \hbox (14.09583pt too wide) in paragraph at lines 3195--3195
+[]\OT1/cmtt/m/n/9 possible_assignments_for_dial(D,Rs) :- ground(D), findall(D=V
+,dial(D,V),Rs).[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [67]
+[68]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [69]
+[70] [71] [72] [73] [74]
+Chapter 9.
+[75
+
+]
+Overfull \hbox (21.63972pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 76 \OT1/cmr/m/sl/10 CHAPTER 9.  THE EIGHT CHAMBER: CONJUNCTION 
+AND DISJUNCTION
+ []
+
+[76]
+Chapter 10.
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 3693--3693
+[]                             \OT1/cmtt/m/n/10 L:and(L1,L2), P*X*H*L1, Q*X*H*L
+2,L=<H]) -->[] 
+ []
+
+[77
+
+]
+Overfull \hbox (6.71027pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 78 \OT1/cmr/m/sl/10 CHAPTER 10.  THE NINTH CHAMBER: UNIVERSAL Q
+UANTIFICATION
+ []
+
+[78] [79]
+Overfull \hbox (6.71027pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 80 \OT1/cmr/m/sl/10 CHAPTER 10.  THE NINTH CHAMBER: UNIVERSAL Q
+UANTIFICATION
+ []
+
+[80]
+Overfull \hbox (4.64594pt too wide) in paragraph at lines 3895--3895
+[]        \OT1/cmtt/m/n/9 forall(member(D,Ds), satisfies_dominance_constraint(D
+, Das_Star)).[] 
+ []
+
+[81]
+Overfull \hbox (28.27066pt too wide) in paragraph at lines 3952--3952
+[]\OT1/cmtt/m/n/9 category(is, (s\np)/(n/n) , Q^(P^(P*(Q*(_X^H^L^[L:formula(tru
+e,[]), L=<H]))))).[] 
+ []
+
+
+Overfull \hbox (28.27066pt too wide) in paragraph at lines 3955--3955
+[]\OT1/cmtt/m/n/9 category(is, (s\np)/(n\n) , Q^(P^(P*(Q*(_X^H^L^[L:formula(tru
+e,[]), L=<H]))))).[] 
+ []
+
+
+Overfull \hbox (47.17044pt too wide) in paragraph at lines 3958--3958
+[]\OT1/cmtt/m/n/9 category(is, (s/np)\np , P^(Q^(Q*(X^(P*(Y^H^L^[L:formula(equa
+l,[Y,X]), L=<H])))))).[] 
+ []
+
+
+Overfull \hbox (61.34528pt too wide) in paragraph at lines 3964--3964
+[]\OT1/cmtt/m/n/9 category(loves, (s/np)\np , P^(Q^(Q*(X^(P*(Y^H^L^[L:formula(l
+oves,[Y,X]), L=<H])))))).[] 
+ []
+
+
+Overfull \hbox (61.34528pt too wide) in paragraph at lines 3965--3965
+[]\OT1/cmtt/m/n/9 category(hates, (s/np)\np , P^(Q^(Q*(X^(P*(Y^H^L^[L:formula(h
+ates,[Y,X]), L=<H])))))).[] 
+ []
+
+
+Overfull \hbox (113.31967pt too wide) in paragraph at lines 3968--3968
+[]\OT1/cmtt/m/n/9 category(stabs, (s/np)\np , P^(Q^(Q*(X^(P*(Y^H^L^L1^L2^L3^L4^
+L5^[label(L1), label(L2), label(L3),[] 
+ []
+
+
+Overfull \hbox (61.34528pt too wide) in paragraph at lines 3971--3971
+[]                                                  \OT1/cmtt/m/n/9 L1:and(L2,L
+3), L2:formula(stab,[Z]),[] 
+ []
+
+
+Overfull \hbox (84.97pt too wide) in paragraph at lines 3972--3972
+[]                                                  \OT1/cmtt/m/n/9 L3:and(L4,L
+5), L4:formula(subject,[Z,Y]),[] 
+ []
+
+
+Overfull \hbox (80.24506pt too wide) in paragraph at lines 3973--3973
+[]                                                                 \OT1/cmtt/m/
+n/9 L5:formula(object,[Z,X]),[] 
+ []
+
+
+Overfull \hbox (6.71027pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 82 \OT1/cmr/m/sl/10 CHAPTER 10.  THE NINTH CHAMBER: UNIVERSAL Q
+UANTIFICATION
+ []
+
+[82]
+Overfull \hbox (28.27066pt too wide) in paragraph at lines 3980--3980
+[]\OT1/cmtt/m/n/9 category(there, np , Q^H^L^H1^L1^L2^L3^[hole(H1),label(L1),la
+bel(L2),label(L3),[] 
+ []
+
+
+Overfull \hbox (23.54572pt too wide) in paragraph at lines 3983--3983
+[]                                        \OT1/cmtt/m/n/9 L1:formula(true, []),
+ L1=<H,Q*X*H*L]).[] 
+ []
+
+
+Overfull \hbox (184.19385pt too wide) in paragraph at lines 3993--3993
+[]\OT1/cmtt/m/n/9 category(green, n/n , P^X^H^L^L1^L2^[label(L1),label(L2), L:a
+nd(L1,L2), L1:formula(green,[X]), P*X*H*L2, L=<H]).[] 
+ []
+
+
+Overfull \hbox (184.19385pt too wide) in paragraph at lines 3994--3994
+[]\OT1/cmtt/m/n/9 category(red,   n/n , P^X^H^L^L1^L2^[label(L1),label(L2), L:a
+nd(L1,L2), L1:formula(red,  [X]), P*X*H*L2, L=<H]).[] 
+ []
+
+
+Overfull \hbox (47.17044pt too wide) in paragraph at lines 3999--3999
+[]                                   \OT1/cmtt/m/n/9 Q*(Y^H1^L1^[L1:formula(on,
+[X,Y]), L1=<H1])*H*L3,[] 
+ []
+
+
+Overfull \hbox (9.37088pt too wide) in paragraph at lines 4003--4003
+[]\OT1/cmtt/m/n/9 category(with, (n\n)/np , Q^P^X^H^L^H2^L2^L3^[hole(H2),label(
+L2),label(L3),[] 
+ []
+
+
+Overfull \hbox (108.59473pt too wide) in paragraph at lines 4006--4006
+[]                                              \OT1/cmtt/m/n/9 Q*(Y^H1^L1^[L1:
+formula(with,[X,Y]), L1=<H1])*H*L3,[] 
+ []
+
+
+Overfull \hbox (47.17044pt too wide) in paragraph at lines 4011--4011
+[]\OT1/cmtt/m/n/9 category(every, np/n , P^Q^H^L^H1^L1^L2^L3^[hole(H1),label(L1
+),label(L2),label(L3),[] 
+ []
+
+
+Overfull \hbox (28.27066pt too wide) in paragraph at lines 4012--4012
+[]                                            \OT1/cmtt/m/n/9 L2:forall(X,L3), 
+L3:implies(L1,H1),[] 
+ []
+
+
+Overfull \hbox (28.27066pt too wide) in paragraph at lines 4016--4016
+[]\OT1/cmtt/m/n/9 category(a, np/n , P^Q^H^L^H1^L1^L2^L3^[hole(H1),label(L1),la
+bel(L2),label(L3),[] 
+ []
+
+
+Overfull \hbox (37.72055pt too wide) in paragraph at lines 4021--4021
+[]\OT1/cmtt/m/n/9 category(the, np/n , P^Q^H^L^H1^L1^L2^L3^[hole(H1),label(L1),
+label(L2),label(L3),[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [83]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (6.71027pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 84 \OT1/cmr/m/sl/10 CHAPTER 10.  THE NINTH CHAMBER: UNIVERSAL Q
+UANTIFICATION
+ []
+
+[84] [85]
+Overfull \hbox (6.71027pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 86 \OT1/cmr/m/sl/10 CHAPTER 10.  THE NINTH CHAMBER: UNIVERSAL Q
+UANTIFICATION
+ []
+
+[86
+
+]
+Chapter 11.
+[87] [88
+
+]
+Chapter 12.
+[89]
+Overfull \hbox (18.37589pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 90 \OT1/cmr/m/sl/10 CHAPTER 12.  THE ELEVENTH CHAMBER: EQUALITY
+ AND FUNCTIONS
+ []
+
+[90
+
+]
+Chapter 13.
+[91]
+Overfull \hbox (6.01587pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 92 \OT1/cmr/m/sl/10 CHAPTER 13.  THE TWELFTH CHAMBER: PREPOSITI
+ONAL PHRASES
+ []
+
+[92
+
+]
+Chapter 14.
+[93]
+Overfull \hbox (10.2497pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 94 \OT1/cmr/m/sl/10 CHAPTER 14.  THE THIRTEENTH CHAMBER: BUILDI
+NG A BETTER NP
+ []
+
+[94
+
+]
+Chapter 15.
+[95]
+Overfull \hbox (13.44417pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 96 \OT1/cmr/m/sl/10 CHAPTER 15.  THE FOURTEENTH CHAMBER: BUILDI
+NG A BETTER VP
+ []
+
+[96
+
+]
+Chapter 16.
+[97]
+Overfull \hbox (21.01587pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 98 \OT1/cmr/m/sl/10 CHAPTER 16.  THE FIFTEENTH CHAMBER: NEO-DAV
+IDSONIAN EVENTS
+ []
+
+[98
+
+]
+Chapter 17.
+[99]
+Overfull \hbox (109.62494pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 100 \OT1/cmr/m/sl/10 CHAPTER 17.  THE SIXTEENTH CHAMBER: CAUSE,
+ EFFECT, AND THE FRAME PROBLEM
+ []
+
+[100
+
+]
+Chapter 18.
+[101]
+Overfull \hbox (33.51482pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 102 \OT1/cmr/m/sl/10 CHAPTER 18.  THE SEVENTEENTH CHAMBER: THE 
+SUBJUNCTIVE MOOD
+ []
+
+[102]
+Chapter 19.
+[103
+
+] [104
+
+]
+Chapter 20.
+[105]
+Overfull \hbox (37.82036pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 106 \OT1/cmr/m/sl/10 CHAPTER 20.  THE NINETEENTH CHAMBER: PRONO
+UNS AND ANAPHORA
+ []
+
+[106
+
+]
+Chapter 21.
+[107]
+Overfull \hbox (18.65366pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 108 \OT1/cmr/m/sl/10 CHAPTER 21.  THE TWENTYETH CHAMBER: NUMBER
+S AND PLURALS
+ []
+
+[108
+
+]
+Chapter 22.
+[109]
+Overfull \hbox (9.69748pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 110 \OT1/cmr/m/sl/10 CHAPTER 22.  THE TWENTY-FIRSTCHAMBER: SPAT
+IAL REASONING
+ []
+
+[110
+
+]
+Chapter 23.
+[111] [112
+
+]
+Chapter 24.
+[113] [114
+
+]
+Chapter 25.
+[115]
+Overfull \hbox (15.11304pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 116 \OT1/cmr/m/sl/10 CHAPTER 25.  THE TWENTY-FOURTH CHAMBER: MU
+LTIPLE AGENTS
+ []
+
+[116
+
+]
+Chapter 26.
+[117]
+Overfull \hbox (11.22311pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 118 \OT1/cmr/m/sl/10 CHAPTER 26.  THE TWENTY-FIFTH CHAMBER: DEG
+REES OF BELIEF
+ []
+
+[118
+
+]
+Chapter 27.
+[119] [120
+
+]
+Chapter 28.
+[121]
+Overfull \hbox (94.76598pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 122 \OT1/cmr/m/sl/10 CHAPTER 28.  THE TWENTY-SEVENTH CHAMBER: C
+ONVERSATIONAL IMPLICATURE
+ []
+
+[122
+
+]
+Chapter 29.
+[123]
+Overfull \hbox (90.11205pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 124 \OT1/cmr/m/sl/10 CHAPTER 29.  THE TWENTY-EIGHTH CHAMBER: NA
+TURAL LANUGAE GENERATION
+ []
+
+[124
+
+]
+Chapter 30.
+[125] [126
+
+]
+Chapter 31.
+[127] [128
+
+]
+Chapter 32.
+[129] [130
+
+]
+Chapter 33.
+[131] [132
+
+]
+Chapter 34.
+[133] [134
+
+]
+Chapter 35.
+[135] [136
+
+]
+Chapter 36.
+[137] [138
+
+]
+Chapter 37.
+[139] [140
+
+]
+Chapter 38.
+[141] [142
+
+] [143
+
+] [144] (./36.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1754 strings out of 493117
+ 25027 string characters out of 6135433
+ 94918 words of memory out of 5000000
+ 5205 multiletter control sequences out of 15000+600000
+ 11101 words of font info for 39 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 37i,8n,24p,246b,324s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2
+014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/201
+4/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2014/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on 36.pdf (152 pages, 354891 bytes).
+PDF statistics:
+ 563 PDF objects out of 1000 (max. 8388607)
+ 388 compressed objects within 4 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

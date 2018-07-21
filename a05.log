@@ -1,0 +1,479 @@
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=latex 2007.5.18)  25 APR 2009 16:35
+entering extended mode
+ %&-line parsing enabled.
+**a05.pl
+(./a05.pl
+LaTeX2e <2005/12/01>
+Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, arabic, basque, bulgarian, coptic, welsh, czech, slovak, german, ng
+erman, danish, esperanto, spanish, catalan, galician, estonian, farsi, finnish,
+ french, greek, monogreek, ancientgreek, croatian, hungarian, interlingua, ibyc
+us, indonesian, icelandic, italian, latin, mongolian, dutch, norsk, polish, por
+tuguese, pinyin, romanian, russian, slovenian, uppersorbian, serbian, swedish, 
+turkish, ukenglish, ukrainian, loaded.
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 /
+     *
+? 
+Missing character: There is no / in font nullfont!
+Missing character: There is no * in font nullfont!
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2005/09/16 v1.4f Standard LaTeX document class
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--324
+[]
+ []
+
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+[1]) (/usr/local/texlive/2007/texmf-dist/tex/generic/xypic/xy.sty
+(/usr/local/texlive/2007/texmf-dist/tex/generic/xypic/xy.tex Bootstrap'ing:
+catcodes, docmode,
+(/usr/local/texlive/2007/texmf-dist/tex/generic/xypic/xyrecat.tex)
+(/usr/local/texlive/2007/texmf-dist/tex/generic/xypic/xyidioms.tex)
+
+ Xy-pic version 3.7 <1999/02/16>
+ Copyright (c) 1991-1998 by Kristoffer H. Rose <krisrose@ens-lyon.fr>
+ Xy-pic is free software: see the User's Guide for details.
+
+Loading kernel: messages; fonts; allocations: state,
+\X@c=\dimen103
+\Y@c=\dimen104
+\U@c=\dimen105
+\D@c=\dimen106
+\L@c=\dimen107
+\R@c=\dimen108
+\Edge@c=\toks14
+\X@p=\dimen109
+\Y@p=\dimen110
+\U@p=\dimen111
+\D@p=\dimen112
+\L@p=\dimen113
+\R@p=\dimen114
+\Edge@p=\toks15
+\X@origin=\dimen115
+\Y@origin=\dimen116
+\X@xbase=\dimen117
+\Y@xbase=\dimen118
+\X@ybase=\dimen119
+\Y@ybase=\dimen120
+\X@min=\dimen121
+\Y@min=\dimen122
+\X@max=\dimen123
+\Y@max=\dimen124
+\lastobjectbox@=\box26
+\zerodotbox@=\box27
+\almostz@=\dimen125
+ direction,
+\d@X=\dimen126
+\d@Y=\dimen127
+\K@=\count88
+\KK@=\count89
+\Direction=\count90
+\K@dXdY=\dimen128
+\K@dYdX=\dimen129
+\xyread@=\read1
+\xywrite@=\write3
+\csp@=\count91
+\quotPTK@=\dimen130
+
+utility macros; pictures: \xy, positions,
+\swaptoks@@=\toks16
+\connectobjectbox@@=\box28
+ objects,
+\styletoks@=\toks17
+ decorations;
+kernel objects: directionals, circles, text; options; algorithms: directions,
+edges, connections;  Xy-pic loaded)
+Package: xy 1999/02/16 Xy-pic version 3.7
+
+(/usr/local/texlive/2007/texmf-dist/tex/generic/xypic/xymatrix.tex
+ Xy-pic option: Matrix feature v.3.4
+\Row=\count92
+\Col=\count93
+\queue@=\toks18
+\queue@@=\toks19
+\qcount@=\count94
+\qcount@@=\count95
+\matrixsize@=\count96
+ loaded)
+(/usr/local/texlive/2007/texmf-dist/tex/generic/xypic/xycurve.tex
+ Xy-pic option: Curve and Spline extension v.3.7 curve,
+\crv@cnt@=\count97
+\crvpts@=\toks20
+\splinebox@=\box29
+\splineval@=\dimen131
+\splinedepth@=\dimen132
+\splinetol@=\dimen133
+\splinelength@=\dimen134
+ circles,
+\L@=\dimen135
+ loaded)
+(/usr/local/texlive/2007/texmf-dist/tex/generic/xypic/xyarrow.tex
+ Xy-pic option: Arrow and Path feature v.3.5 path, \ar, loaded)
+(/usr/local/texlive/2007/texmf-dist/tex/generic/xypic/xytips.tex
+ Xy-pic option: More Tips extension v.3.3 loaded)
+(/usr/local/texlive/2007/texmf-dist/tex/generic/xypic/xyframe.tex
+ Xy-pic option: Frame and Bracket extension v.3.7 loaded))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/misc209/bar.sty
+Option BAR, Version 1.0 Sep. 92, J.Bleser, TH Darmstadt, HRZ
+bug fix for CTAN April 1994 (SPQR, for David Carlisle)
+\breite=\count98
+\hoehe=\count99
+\tiefe=\count100
+\lhoehe=\count101
+\anzbar=\count102
+\hbarI=\count103
+\xpos=\count104
+\lxpos=\count105
+\halfbreite=\count106
+\ypos=\count107
+\lypos=\count108
+\tmpa=\count109
+\tmpb=\count110
+\tmpc=\count111
+\tmpd=\count112
+\tmpe=\count113
+\xmin=\count114
+\xmax=\count115
+\xstep=\count116
+\deltax=\count117
+\yhoehe=\count118
+\ymin=\count119
+\ymax=\count120
+\ystep=\count121
+\yminII=\count122
+\ymaxII=\count123
+\deltay=\count124
+\ymove=\count125
+\xmove=\count126
+\inter=\count127
+\exact=\count128
+\xexact=\count129
+\dtmpa=\dimen136
+\dtmpb=\dimen137
+\dmin=\dimen138
+\dmax=\dimen139
+\dstep=\dimen140
+\dxmin=\dimen141
+\dxmax=\dimen142
+\dxstep=\dimen143
+\faktor=\dimen144
+\dinter=\dimen145
+\mybox=\box30
+\xbox=\box31
+\ybox=\box32
+\vorz=\count130
+) (/usr/local/texlive/2007/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+(/usr/local/texlive/2007/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2007/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2007/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2007/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: dvips.def on input line 90.
+
+(/usr/local/texlive/2007/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen146
+\Gin@req@width=\dimen147
+)
+\epsfxsize=\dimen148
+\epsfysize=\dimen149
+)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks22
+\verbatim@line=\toks23
+\verbatim@in@stream=\read2
+)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2006/05/18 v1.6g multicolumn formatting (FMi)
+\c@tracingmulticols=\count131
+\mult@box=\box33
+\multicol@leftmargin=\dimen150
+\c@unbalance=\count132
+\c@collectmore=\count133
+\doublecol@number=\count134
+\multicoltolerance=\count135
+\multicolpretolerance=\count136
+\full@width=\dimen151
+\page@free=\dimen152
+\premulticols=\dimen153
+\postmulticols=\dimen154
+\multicolsep=\skip43
+\multicolbaselineskip=\skip44
+\partial@page=\box34
+\last@line=\box35
+\mult@rightbox=\box36
+\mult@grightbox=\box37
+\mult@gfirstbox=\box38
+\mult@firstbox=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\c@columnbadness=\count137
+\c@finalcolumnbadness=\count138
+\last@try=\dimen155
+\multicolovershoot=\dimen156
+\multicolundershoot=\dimen157
+\mult@nat@firstbox=\box57
+\colbreak@box=\box58
+)
+\c@theorem=\count139
+\c@prop=\count140
+\c@axiom=\count141
+\c@definition=\count142
+\@indexfile=\write4
+\openout4 = `a05.idx'.
+
+
+Writing index file a05.idx
+(./a05.aux)
+\openout1 = `a05.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+ [2
+
+
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 32.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 32.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 32.
+ [1] [2
+
+] [1] [2
+
+] (./a05.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 2.
+ [3])
+\tf@toc=\write5
+\openout5 = `a05.toc'.
+
+ [4]
+Chapter 1.
+[1
+
+
+]
+
+LaTeX Warning: Citation `teaching_prolog_book' on page 2 undefined on input lin
+e 161.
+
+[2]
+Overfull \hbox (93.23044pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10 1.3.  WHY ARE YOU USING PROLOG INSTEAD OF (INSERT FAVORITE LAN
+GUAGE HERE) \OT1/cmr/m/n/10 3
+ []
+
+[3] [4]
+Chapter 2.
+[5
+
+] [6] [7] [8] [9] [10] [11] [12] [13] [14]
+Chapter 3.
+[15
+
+]
+Overfull \hbox (9.83415pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 16 \OT1/cmr/m/sl/10 CHAPTER 3.  THE SECOND CHAMBER: TOKENIZATIO
+N AND PARSING
+ []
+
+[16] [17]
+Overfull \hbox (9.83415pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 18 \OT1/cmr/m/sl/10 CHAPTER 3.  THE SECOND CHAMBER: TOKENIZATIO
+N AND PARSING
+ []
+
+[18] [19]
+Overfull \hbox (9.83415pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 20 \OT1/cmr/m/sl/10 CHAPTER 3.  THE SECOND CHAMBER: TOKENIZATIO
+N AND PARSING
+ []
+
+[20]
+Chapter 4.
+[21
+
+]
+Overfull \hbox (46.63861pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 22 \OT1/cmr/m/sl/10 CHAPTER 4.  THE THIRD CHAMBER: GRAMMARS FOR
+ NATURAL LANGUAGE
+ []
+
+[22] [23]
+Overfull \hbox (46.63861pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 24 \OT1/cmr/m/sl/10 CHAPTER 4.  THE THIRD CHAMBER: GRAMMARS FOR
+ NATURAL LANGUAGE
+ []
+
+[24] [25]
+Overfull \hbox (46.63861pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 26 \OT1/cmr/m/sl/10 CHAPTER 4.  THE THIRD CHAMBER: GRAMMARS FOR
+ NATURAL LANGUAGE
+ []
+
+[26]
+Chapter 5.
+[27
+
+]
+Overfull \hbox (120.45822pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 28 \OT1/cmr/m/sl/10 CHAPTER 5.  THE FOURTH CHAMBER: EXISTENTIAL
+ QUANTIFICATION AND PREDICATION
+ []
+
+[28]
+Overfull \hbox (57.80527pt too wide) in paragraph at lines 1399--1404
+\OT1/cmr/m/n/10 "A block is blue" and "is a block blue?" both get trans-lated i
+nto "ex-ists(X,block(X),blue(X))".
+ []
+
+[29]
+Overfull \hbox (120.45822pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 30 \OT1/cmr/m/sl/10 CHAPTER 5.  THE FOURTH CHAMBER: EXISTENTIAL
+ QUANTIFICATION AND PREDICATION
+ []
+
+[30] [31]
+Overfull \hbox (120.45822pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 32 \OT1/cmr/m/sl/10 CHAPTER 5.  THE FOURTH CHAMBER: EXISTENTIAL
+ QUANTIFICATION AND PREDICATION
+ []
+
+[32
+
+]
+Chapter 6.
+[33]
+Overfull \hbox (13.86082pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 34 \OT1/cmr/m/sl/10 CHAPTER 6.  THE FIFTH CHAMBER: DIALOG AND D
+ATABASE UPDATE
+ []
+
+[34] [35]
+
+LaTeX Warning: Citation `rorty2000' on page 36 undefined on input line 1696.
+
+
+LaTeX Warning: Citation `monk' on page 36 undefined on input line 1722.
+
+
+Overfull \hbox (13.86082pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 36 \OT1/cmr/m/sl/10 CHAPTER 6.  THE FIFTH CHAMBER: DIALOG AND D
+ATABASE UPDATE
+ []
+
+[36] [37]
+Overfull \hbox (2.25056pt too wide) in paragraph at lines 1820--1825
+\OT1/cmr/m/n/10 For each of the new existentially-quantified vari-ables, we hav
+e to make a decision--
+ []
+
+
+Overfull \hbox (13.86082pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 38 \OT1/cmr/m/sl/10 CHAPTER 6.  THE FIFTH CHAMBER: DIALOG AND D
+ATABASE UPDATE
+ []
+
+[38]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39]
+Overfull \hbox (13.86082pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 40 \OT1/cmr/m/sl/10 CHAPTER 6.  THE FIFTH CHAMBER: DIALOG AND D
+ATABASE UPDATE
+ []
+
+[40] [41]
+Overfull \hbox (13.86082pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 42 \OT1/cmr/m/sl/10 CHAPTER 6.  THE FIFTH CHAMBER: DIALOG AND D
+ATABASE UPDATE
+ []
+
+[42
+
+] [43
+
+] (./a05.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2819 strings out of 94074
+ 33225 string characters out of 1163007
+ 123169 words of memory out of 1500000
+ 6100 multiletter control sequences out of 10000+50000
+ 12244 words of font info for 46 fonts, out of 1200000 for 2000
+ 645 hyphenation exceptions out of 8191
+ 32i,8n,26p,215b,323s stack positions out of 5000i,500n,6000p,200000b,5000s
+
+Output written on a05.dvi (51 pages, 96088 bytes).

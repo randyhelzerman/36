@@ -1,0 +1,751 @@
+/*
+\documentclass{book}[9pt]
+%\oddsidemargin  0.5in
+%\evensidemargin 0.0in
+%\textwidth      7in
+%\headheight     0.0in
+%\topmargin      0.0in
+%\textheight     8in
+
+\usepackage{bar}
+\usepackage{epsfig}
+\usepackage{verbatim}
+\usepackage{makeidx}         % allows index generation
+\usepackage{multicol}        % used for the two-column index
+
+\newenvironment{code}%
+{\small \verbatim}%
+{\endverbatim \large}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{prop}{Proposition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{definition}{Definition}
+
+\makeindex
+
+\begin{document}
+
+\author{Randall A. Helzerman}
+\title{The 36 Chambers of SHRDLU}
+\maketitle
+
+\frontmatter
+
+
+
+\begin{code}
+*/
+
+:-use_module(library(lists)).
+:-use_module(library(ugraphs)).
+%:-use_module(library(swi)).
+
+:-discontiguous(clause/1).
+:-discontiguous(reduce/3).
+:-discontiguous(category/3).
+:-discontiguous(combine_sem/6).
+:-discontiguous(process_logical_form/2).
+
+:-dynamic(clause/1).
+:-dynamic(axiom/1).
+
+/*
+\end{code}
+
+\tableofcontents
+
+\mainmatter
+
+\chapter{Introduction}
+
+SHRDLU was an amazing program for natural language understanding,
+written by Dr. Terry Winograd.  SHRDLU's expertise was limited to
+conversations about the ``blocks world'', which is a restricted domain
+consisting of a tabletop with a bunch of colored blocks on it.  The
+blocks have various shapes, and can be stacked on top of each other or
+arrainged in various ways, subject to a rudimentary set of physical
+laws.
+
+The user could have conversations with SHRDLU about this domain,
+asking it questions about the blocks on the table and the
+configurations that they were in, and instructing it to create towers
+by stacking blocks on top of each other.
+
+This is an example conversation which the users could have with 
+SHRDLU:
+\begin{verbatim}
+PERSON: Is there a large block behind a pyramid?
+SHRDLU: Yes, three of them.  A large red one, a large green 
+        cube, and the blue one.
+PERSON: Put a small one onto the green cube which supports 
+        a pyramid.
+SHRDLU: OK
+PERSON: Does the shortest thing the tallest pyramid's support 
+        supports support anythying green?
+SHRDLU: Yes, the green pyramid.
+\end{verbatim}
+\noindent In addition to text input-output, SHRDLU had
+three-dimensional graphic output which displayed the state of the
+blocks world and animated the moving of blocks according to the
+commands of the user.
+
+But the most amazing thing about SHRDLU was that it was written over
+30 years ago!  The Computing power of children's playthings have
+literally millions of times more processing power than the PDP-6 which
+hosted SHRDLU.  But today there are no examples of natural language
+processing programs remotely appraching SHRDLU's ability to understand
+complex sentences.  What happened?
+
+This book is an exploration of of what we've learned about natural
+language processing since SHRDLU.  The method of exploration is to
+reimplement SHRDLU from scratch, using the latest syntactic and
+semantic tricks we have learned in the intervening 36 years.
+
+\section{Why all these chambers??}
+
+The title of this book is an allusion to the Shaw Brothers film ``The
+36th Chamber of Shaolin,'' which is indubitably one of the greatest
+martial arts film of all time.  A young man enters the Shaolin Temple
+to learn Kung-Fu.  As he learns Kung-fu, he progresses through 36
+chambers, each chamber containing increasingly difficult physical and
+mental hardships and skills he must master.  The entire process bears
+more than a passing resemblance to grad school.
+
+But the real inspiration behind this chambered approach is from a
+suggestion by Fred Brooks in his book ``The Mythical Man Month'' in
+which he suggests that we change the metaphor from ``architecting'' a
+program to ``growing'' a program.  Just as a living organism starts
+small but is nevertheless a complete living organism and grows bigger,
+Similarly, we should try as soon as possible to form a working
+computer program, and ``grow'' it by making each of the subsystems
+incrementally more and more powerful.  An excellent example of how
+effective this approach can be in the context of natural language
+processing is Patrick Blackburn and Johan Bos's book ``Natural
+Language Understanding''.  The start with a small but complete system
+called ``CURT'' and then they grow it, and the sucession of ever
+cleverer CURTs gives the reader a smooth on-ramp which greatly eases
+the burden of understanding.
+
+This book follows a similer pattern.  We get a very small, but
+complete system working as quickly as possible, and then each
+suceeding chamber illustrates how to enhance the functionality of one
+of the subsystems, or how to integrate a new functionality into an
+already working system.
+
+\section{Why are your programs half-baked?}
+
+\begin{quote}
+{\em There is a crack in everything \\ that's how the light gets in
+  \\ } -- Leonard Cohen.
+\end{quote}
+
+This book was written primarily for didactic purposes.  The emphasis
+is on understandability.  Some of the routines are simplistic, and
+don't handle all of the corner cases which a full, robust system would
+have to handle.  Most of the time, this is as a set-up for the next
+chamber--experiencing the painful limitations of one program are the
+best motivation for the next chamber.  But sometimes, I rest content
+with sub-optimal solution, or a solution which doesn't handle all of
+the corner cases.  If you find a routine like this, congratulations!
+Pat yourself on the back, and write the correct version in your
+program.
+
+
+\section{Why are you using Prolog instead of (insert favorite language here)}
+
+Prolog is, these days, a very arcane, indeed archaic, language.
+Although it had good P.R. during the 80's, it never made the leap from
+niche to mainstream--why not?  There are many reasons (see
+\cite{teaching_prolog_book} for heroic attempts to overcome some of
+these drawbacks) but the can be summarized like this: It is said that
+a good programming language should have two virtues:
+\begin{enumerate}
+\item It should mke simple tasks easy.
+\item It should make difficult tasks possible.
+\end{enumerate}
+\noindent What really prevented prolog from ever being a mainstream
+programming language, I'm afraid, is that sorely lacks the first virtue.
+So why use it?  Well, prolog fairs much better on the second virtue, and
+in addition, it has a third virtue uniquely its own, which most other 
+programing language {\em don't} have:
+\begin{enumerate}
+\item It makes (otherwise) impossible tasks possible.
+\end{enumerate}
+
+In this reguard, I think it would be interesting to consider the
+example of the book ``Paradigms of AI Programming'' by Peter Norvig,
+which is, in the opinion of this author, the best book on programming
+ever written.  In his book, Norvig describes in detail several natural
+language processing programs, with varying capabilities.  When looking
+at these programs, an interesting pattern emerges: any program which
+needs more than the most basic powers of analyzing the structure of
+sentences is written in prolog.  Norvig's preferred programming
+languge is LISP, but on the way to natural language processing, Norvig
+finds it useful to {\em first} implement prolog in LISP and {\em then}
+implement his natural language processing programs on top of prolog.
+
+This is by no means an isolated case.  Carl Hewitt's invention of
+planner, for example, or (even more pertinently) Terry Winograd's
+SHRDLU.  Because both of these authors emphasized the {\em doing} part
+of understanding language (e.g. to understand ``the block'' go and
+{\em find} a block in the database) it might seem strange to cite
+these as examples of using prolog as an abstraction layer.  However,
+Hewitt has emphasized that prolog is really a version of planner, and
+therefore SHRDLU (which was also written in a version of planner
+called MICROPLANNER) very much exemplifies this strategy of using a
+prolog-esque layer of abstraction on top of LISP.
+
+This of course, is obvious only in hindsight. The whole LISP/prolog
+dichotomy is a false dichotomy.  No matter what programming language
+you use, you will find it useful to structure your programs such that
+they have many levels of abstraction on top of assembly language, and
+one of these levels of abstraction is gunna look a lot like prolog.
+Since this is inevitable anyways, we might as well start not from
+assembly language, or even LISP, but from prolog.  We can thereby help
+ourselves to over 30 years worth of prolog research, which has
+produced very fast and efficient prolog compilers, as well as
+libraries, programming techniques and methodologies, and a wealth of
+practical know-how in constructing and maintaining programs.  Well
+begun is half done.
+
+\section{Why don't you make the programs downloadable?}
+
+Typing programs in from the printed page has a venerable history.
+This book is written to help you learn.  If you are a novice prolog
+programmer or linguist, typing in programs is a great way to fix the
+concepts in your mind.  If you are NOT a novice, you probably already
+have several NLP systems which you've already written lying around--in
+which case you won't want to use the programs in this book as, is,
+you'll want to adapt them to your own programing
+language/environment/infrastructure.  In neither case will you benefit
+at all by just downloading and running the program.
+
+
+\chapter{The First Chamber: Prolog}
+
+\section{Variables}
+
+Sometimes, there is an object you you want to talk about.  But you don't exactly
+know {\em which} object it is.   But even though its exact identity is unknown to you,
+you do know a few facts about it.  A good example of this is the game of 20
+questions:
+\begin{verbatim}
+Is it smaller than a breadbox?  yes
+Is it red?                       no
+Is it round?                    yes
+\end{verbatim}
+\noindent The game is to use what you {\em do} know about the unknown
+object to find out {\em which} object it is.  In algebra class, you
+learned another way to do this: use a letter in place of a number:
+\begin{displaymath}
+2*X=4
+\end{displaymath}
+\noindent We don't know exactly {\em which} number $X$ is, but we do
+know that if you add 2 to it you get 4.  Prolog uses variables much
+the same way that algebra does.  The general gameplan is to using a
+variable to find out as many facts as you can about the unknown object.
+If you know enough {\em other} facts about it, you can figure out which
+object you {\em are} talking about.
+
+Syntactically, a variable in prolog is:
+\begin{enumerate}
+\item an  upper-case letter
+\item optionally followed by any number of upper or lower case letters,
+or the underscore character '\_'. 
+\end{enumerate}
+\noindent for example:
+\begin{verbatim}
+X  Y  Distance  This_is_a_variable
+\end{verbatim}
+
+In algebra, you could only talk about numbers using variables.  Prolog
+is a bit more flexible.  The kinds of things we can talk about in
+prolog are {\em atoms} and {\em terms}.
+
+The most basic things we can talk about are atoms.  Atoms can be
+numbers (as in algebra), but they can also be strings of characters of
+this form:
+\begin{enumerate}
+\item a lower case letter
+\item optionally followed by any number of upper or lower case letters,
+or the underscore character '\_'.
+\end{enumerate}
+\noindent for example, here are some atoms:
+\begin{verbatim}
+abraham  issac jacob
+my_left_foot
+\end{verbatim}
+\noindent here are some items which are not atoms
+\begin{verbatim}
+f(x)
+a+b
+``this is not an atom''
+\end{verbatim}
+\noindent those are all {\em terms}.  A term is a way of creating a
+new object out of atoms (kind of like in chemestry how molecules are
+made out of atoms).  For example, we want to represent a burrito, made
+out of a tortilla, beans, shredded chease, and salsa:
+\begin{verbatim}
+burrito(tortilla,beans,shreadded_cheese,salsa).
+\end{verbatim}
+\noindent a term has a {\em functor} (in the above case, its ``burrito'') and
+{\em arguments} which appear in parenthesis after the functor.
+
+So, to reherse: prolog lets you name things with variables, and the
+things which are named by the variables in prolog are atoms and terms.
+To see how we can assign a name to a term, lets go to the command
+line.
+
+\section{Read-Eval-Print Loop}
+
+After you launch prolog, the command line prompt looks like this:
+\begin{verbatim}
+?-
+\end{verbatim}
+\noindent At the prompt, you can give an atom a name like this:
+\begin{verbatim}
+?-  X = 5.
+\end{verbatim}
+\noindent and prolog prints out:
+\begin{verbatim}
+X=5
+?-
+\end{verbatim}
+\noindent We could also do a term:
+\begin{verbatim}
+?- X = burrito(tortilla,beans,shreadded_cheese,salsa).
+
+X = burrito(tortilla,beans,shreadded_cheese,salsa).
+?-
+\end{verbatim}
+
+\section{Unification}
+
+Try typing in:
+\begin{verbatim}
+?-  X = 1+1.
+\end{verbatim}
+\noindent You might be surprised that you get:
+\begin{verbatim}
+X = 1+1
+?- 
+\end{verbatim}
+\noindent why didn't prolog do the addition?  The answer is that
+``1+1'' is a term.  The ``+'' is a functor (much like the functor
+"burrito" above), but instead of being written as ``+(1,1)'' in front
+of its arguments, like the ``burrito'' functor was, it was written in
+between them.  The ``+'' operator has what is called {\em infix}
+behavior.  There several other operators which can be used in an infix
+way like this (the other arithmetic operators being obvious examples).
+
+But for our present purposes, this means that ``1+1'' is not the same
+term as "2".  In fact, they are different categories, ``1+1'' being a
+term, and ``2'' being an atom.  This brings us to the "=" sign in
+prolog.  In prolog, two things are ``='' to each other when:
+\begin{enumerate}
+\item They are same term or atom, e.g. ``1+1 = 1+1''.
+\item They can be made to {\em be} the same term by assigning some
+ values to variables. e.g. ``X = 1+1''.
+\end{enumerate}
+\noindent Given the above, this behaviour shouldn't be surprising to you:
+\begin{verbatim}
+?- 1+1=X.
+
+X = 1+1
+?- 
+\end{verbatim}
+\noindent ``='' is completely symmetric: it doesn't matter what side
+of the = sign the variable is on.  But ``='' is even more flexible
+than this.  The variables which we are assigning can be inside of a
+term:
+\begin{verbatim}
+?- 1+1=X.
+
+X = 1+1
+?- 
+\end{verbatim}
+\noindent What prolog has done here is find {\em what value} needs to
+be assigned to the variable ``X'' in order to make ``1+X'' the same
+term as ``1+1''.  Obviously, the answer is ``X=1'' as prolog prints
+out.
+
+The sort of atom-and-term equality which prolog usese is called 
+{\em unification}.  Two terms are said to {\em unify} if they are already
+the same term, or they can be made into the same term by instantiating
+any variables they contain.
+
+\section{Relations}
+
+To use prolog, you need to learn to use a new language, whimically
+called ``Prolog-ese'' (sometimes more derisively revered to as
+``Komputerdeutch'').  The easiest way to learn it is to see some
+examples.  We'll use a biblical example, from the King James Version,
+of course.
+\begin{quote}
+Mathew 1:14-16 Eleazar begat Matthan, and Matthan begat Jacob, and
+Jacob begat Joseph, the husband of Mary, of whome was born Jesus
+\end{quote}
+To translate ``Eleazar begat Matthan'' into prolog-ese, we first ask
+the question: what is the relationship between Eleazar and Mathan?
+Typically, this relationship is expressed by the verb and associated
+words, in this case simply ``begat''.  We then indicate that
+``Abraham'' and ``Jacob'' stand in this relationship to each other by
+putting them in parenthesis behind the relationship, like this.  Open
+up the editor and type in these names:
+\begin{verbatim}
+begat(eleazar,matthan).
+\end{verbatim}
+\noindent Notice, we can't capitalize the names, because strings
+beginning with capital letters are variables.  Continuing the rest of
+the mini-geneology:
+\begin{verbatim}
+begat(matthan,jacob).
+begat(jacob,joseph).
+\end{verbatim}
+\noindent now save and compile the file, and go to the command line.
+At the command line, we can now ask questions.  First, lets ask some
+yes/no questions.  ``Is Eleazar the father of Matthan?'' translates
+to:
+\begin{verbatim}
+?- begat(eleazar,matthan).
+
+Yes
+?- 
+\end{verbatim}
+\noindent We can also ask Wh-questions, like ``Who is the father of
+matthan?''  Note, this fits the pattern mentioned above.  We know
+something about X, namely, that X is the father of Matthan.  So we can
+use the fact that X is the father of Matthan to find out exactly who X
+is:
+\begin{verbatim}
+?- begat(X,matthan).
+
+X = eleazar
+
+Yes
+\end{verbatim}
+Here is wisdom: until now, we've only asked questions which have one
+answer.  But most questions have many answers.  Here is one such
+question: ``Who is the father of whom?''  There are many fathers and
+many sons, so this will question will have many answers.  How to
+phrase it?  We use two variables.
+\begin{verbatim}
+?- begat(X,Y).
+
+X = eleazar,
+Y = matthan
+\end{verbatim}
+\noindent Prolog returns you {\em one} of the solutions.  But it
+indicates to you that there may be more.  Until now,we've just pressed return.
+But instead of pressing return, press ``;'':
+\begin{verbatim}
+?- begat(X,Y).
+
+X = eleazar,
+Y = matthan ;
+
+X = matthan,
+Y = jacob 
+\end{verbatim}
+\noindent and another solution appears.  Pressing ``;'' again will
+cause the last solution to be displayed.  This ability of prolog to
+explore {\em all possible} answers to a question is a big key to its
+power.
+
+\subsection{Some cautions}
+
+To illustrate a pitfall when extracting relations from English prose, 
+lets go over to the {\em other} geneology of Jesus which is found in
+the New Testament. 
+\begin{quote}
+Luke 3:23-24 
+Joseph, which was the son of Heli, which was the son of
+Matthat, which was the son of Levi \ . \ . \ .
+\end{quote}
+\noindent So first of all, we notice that English has several
+different ways to express the same concept.  Matthew uses ``begat''
+and Luke uses ``was the son of''.  When you are translating English
+sentences into prolog, there is one thing you have to watch out for.
+Typically, what we do is pick one, and then stick with it.
+
+But there's another pitfall here.  Suppose we want to add the
+information found in Luke here to the information found in Matthew.
+So far we have:
+\begin{verbatim}
+% from Matthew
+begat(eleazar,matthan).
+begat(matthan,jacob).
+begat(jacob,joseph).
+
+% from Luke
+begat(heli,joseph).
+begat(matthat,heli).
+begat(levi,matthat).
+\end{verbatim}
+\noindent Compile and consult the file, and now lets ask who the
+father of Joseph is?
+\begin{verbatim}
+?- begat(X,joseph).
+
+X = jacob ;
+
+X = heli
+\end{verbatim}
+\noindent We get two different fathers for Joseph!  Now notice
+carefully, because this is probably the biggest cause of prolog bugs:
+In our minds, we have all kinds of knowledge about the ``begat'' relationship
+between father and son.  One of those bits of knowledge is that a son
+only has one father.  But, of course, prolog doesn't know that--prolog
+only knows what we've told it.  And we've told prolog here that Joseph
+has two fathers, Jacob and Heli.
+
+So what to do?  Well, lets take our clue from Joseph's grandfather.
+Matthew says that Joseph's grandfather was Matthan, Luke says that he
+was Matthat.  These look like just a minor spelling variation, so
+we'll assume that they both are the same name of the same person, just
+spelled wrong.  But of course, to prolog, matthan $\neq$ matthat.  So
+what we do is kind of the same thing we did for the ``father of''
+relation--we just pick a name and stick with it.  It doesn't matter
+which name we pick, but here's the thing--in prolog, everythign you
+talk about has to have one and only name.  This is called the 
+{\em unique names assumption}.  Prolog will {\em always} assume that
+Matthan and Matthat are two different things.  So don't confuse
+prolog--just pick one name for each thing you want to talk about and
+stick with it.  
+
+But there's another problem here.  ``Heli'' doesn't really look like
+an alternate spelling for ``Jacob''.  Probably if you saw those two
+different names, you'd do what prolog does, and assume they were
+talking about two different people.  So this illustrates another
+difficulty when translating English into Prolog.   Most of the knowledge
+we have is self-contradictory.  But how to handle it?  We have all kinds of choices here.  
+\begin{enumerate}
+\item We can either say that Jacob actally had two names 
+(he was known as ``Heli'' to his poker buddies).
+\item We can say that there was a scribal error here--somebody just
+  goofed while copying.  ``Jacob'' is the correct name.  (Or we could
+  say that ``Heli'' is the correct name and ``Jacob'' is the mistake.)
+\item We can say that we were wrong about the ``father''
+  relation--scripture actually teaches us that a son can have two
+  fathers, or ocassionally, 0 fathers due to a virgin birth.
+\end{enumerate}
+\noindent The key here is that there's really nothing inherent in the
+translation process which is going to help us choose which way to go.
+Which one we choose depends upon our purposes and desires.  The more
+different alternatives you can think of, the more likely it will be
+that you can fulfill your purposes and desires.  This is one of the
+key differences between a mediocre and a top-flight programmer: a
+topflight programmer will always think of more possilbe ways to
+reconcile contradictory information and requirements.
+
+For the present, we'll assume that there has been a scribal error,
+Luke goofed on the name of father of Jacob.  Once we assume this, we
+can confirm our theory by noticing that Luke also misspeled ``Matthan'',
+and so we'll just stick with the Geneology in Matthew for the present.
+
+The key points to remember:
+\begin{enumerate}
+\item Each relation must have one unique name.
+\item Each thing we talk about must have one unique name.
+\item The more possible ways you can think to resolve contrdictory
+  information, the better programmer (or theologen) you will be.
+\end{enumerate}
+
+\section{The Grandfather Clause}
+
+In our program, we've only talked about the relationship of
+fatherhood.  What if we wanted to know about grandparents?  In fact,
+there is enough information implicitly in the database to find out who
+the grandparent of, say, Joseph is.  On the command line, with a
+little thought, we can formulate a query which will produce it:
+\begin{verbatim}
+?- begat(Parent,joseph), begat(Grandparent,Parent).
+
+Parent = jacob,
+Grandparent = matthan
+\end{verbatim}
+\noindent Notice how we've strategically used a shared variable to
+link the two ``begat'' queries together.  Both queries share the
+variable ``Father'', so when it is instantiated in the first query, it
+is used in the secong query to select the father of the father.  Also
+notice, suppose we weren't interested in just Joseph's
+grandfather--suppose we wanted to be able to find anybody's
+grandfather.  We could just replace the hard-coded ``joseph'' with a
+variable, and it would work like this:
+\begin{verbatim}
+?- begat(Parent,Kid), begat(GrandParent,Parent). 
+Parent = matthan,
+Kid = jacob,
+GrandParent = eleazar ;
+
+Parent = jacob,
+Kid = joseph,
+GrandParent = matthan ;
+
+No
+?- 
+\end{verbatim}
+
+\section{Rules}
+
+Now we know how to find grandfathers.  There is a problem, however.
+Its kind of a bummer to have to keep typing two begats all the time,
+so suppose we wanted to modify our original program to have a clause
+``grandparent(Kid,Grandparent)'' in it, which was true if
+``Grandparent'' were bound to the grandparent of whatever ``Kid'' was
+bound to.  There are two ways we could do it.  We could, by hand, type
+in all the relations.  But this is tedious, error prone, hard to
+update, and worst of all, redundant.  Our database already contains
+the information we need, we just need to tell it how to derive
+grandparent information from begat information.
+
+To do this, we need what is called a {\em rule}.  Rules are durn near
+the last prolog constructs you will need to learn.  Rules have two
+parts, a {\em head} and a {\em body}.  Lets talk about the body first.
+The body of the rule is just a query, the same kind that you could type
+in on the command line.  For our grandfather example, the body would be:
+\begin{verbatim}
+begat(Parent,Kid), begat(GrandParent,Parent). 
+\end{verbatim}
+\noindent  The {\em head} of the rule is what you would like to name this query. 
+For our example, we've said we wanted to name it: 
+\begin{verbatim}
+grandparent(Kid,GrandParent)
+\end{verbatim}
+\noindent  Now, the head and the body of the rule are connected with what is
+called (surprise surprise) the {\em neck}.  Its just the symbol ``:-''.  So the
+whole rule will look like:
+\begin{verbatim}
+grandparent(Kid,GrandParent) :- 
+     begat(Parent,Kid), begat(GrandParent,Parent). 
+\end{verbatim}
+\noindent If you add that rule to your biblical geneology program and
+consult the file, then you will be able to use it to find the grandparents
+of people just the same way you were able to use ``begat'' to find the parents
+of people.
+
+\section{Counting and Recursion}
+
+Suppose there were a father who had three sons:
+\begin{verbatim}
+begat(father, son1). begat(father, son2). begat(father, son3).
+\end{verbatim}
+\noindent We can enumerate these three on the command line:
+\begin{verbatim}
+?- begat(father, Son).
+Son = son1 ;
+Son = son2 ;
+Son = son3 ;
+\end{verbatim}
+\noindent but how could we count them?  Right now, we can deal with
+multiple sons, but we're dealing them at seperate instances in time.
+Instead of dealing with one object at three different times, we want
+to be able to deal with three objects at the same time.  Prolog
+provides a way to do this.  It is called a {\em list}. Syntactically,
+lists are easy--just seperate what you want to put in the list by
+commans, and enclose the whole thing with square brackets, like this:
+\begin{verbatim}
+[1,2,3]
+\end{verbatim}
+\noindent  But how do we create one of these lists?  Prolog provides a nice
+built-in function to do just this.  Its called {\em findall/3} and it works
+like this:
+\begin{verbatim}
+?- findall(Son, begat(father,Son), Sons).
+Sons = [son1,son2,son3]
+\end{verbatim}
+
+The first argument is a variable.  The second argument is a query,
+(which we could do on the command line), which contains that variable.
+The third argument is a list of all of the values for the variable
+which the query succeds on.
+
+\section{Meta Interpreters}
+
+\section{Useful Prolog Warts}
+
+\subsection{Testing For Groundness}
+
+\subsection{Self-Modifying Code}
+
+An example of how to use this is creating a new constant.  This is
+used during skolemization.  Most prologs these days have this
+predicate build-in, but if yours doesn't it is handy to know how to be
+able to add it.
+
+\begin{code}
+gensym(Root, Atom) :-
+        name(Root,Name1),
+        get_num(Root,Num),
+        name(Num,Name2),
+        append(Name1,Name2,Name),
+        name(Atom,Name).
+
+get_num(Root,Num1) :-
+        retract(current_num(Root,Num)),!,
+        Num1 is Num + 1,
+        asserta(current_num(Root,Num1)).
+
+get_num(Root,1) :- asserta(current_num(Root,1)).
+\end{code}
+
+\subsection{Testing whether variables are unified to each other}
+
+In prolog, X == Y is true iff X and Y the same variable, or that one
+is an alias of the other.
+    
+\subsection{Double Negation in order not to bind variables trick}
+
+\addcontentsline{toc}{chapter}{Bibliography}
+\begin{thebibliography}{1}
+\bibitem{del8}
+\newblock The Fracas Consortium, Robin Cooper, et al.
+\newblock Describing the Approaches
+\newblock The Fracas Project deliverable D8
+\newblock Available online, just google for it...
+\newblock December 1994
+\bibitem{del9}
+\newblock The Fracas Consortium, Robin Cooper, et al.
+\newblock The State of the Art in Computational Semantics:
+\newblock Evaluating the Descriptive Capabilities of Semantic Theories
+\newblock The Fracas Project deliverable D9
+\newblock Available online, just google for it...
+\newblock December 1994
+\bibitem{keller88}
+\newblock William Ralph (Bill) Keller.
+\newblock Nested Cooper storage: The proper treatment of
+lquantification in ordinary noun phrases.
+\newblock In U. Reyle and C. Rohrer, editors
+\newblock Natural Language parsing and Linguistic Theories
+\newblock pages 432-445
+\newblock Reidel, Dordrecht, 1988.
+\bibitem{larson85}
+\newblock Larson, R.K. (1985).  On the syntax of disjunction scope.
+\newblock Natural Language and Linguistic Theory
+\newblock 3:217, 265
+\bibitem{nasslli2003}
+\newblock Patrick Blackburn and Johan Bos
+\newblock Computational Semantics for Natural Language
+\newblock Course Notes for NASSLLI 2003
+\newblock Indiana University, June 17-21, 2003
+\newblock Available on the web, just google for it....
+\bibitem{marcus93}
+\newblock Mitchell P. Marcus,  Beatrice Santorini and Mary ann Marciniewicz.
+\newblock Building a large annotated corpus of English: the Penn Treebank.
+\newblock in Computational Linguistics, vol. 19, 1993.
+\bibitem{Parsons90}
+\newblock Terrence Parsons
+\newblock Events in the semantics of English
+\newblock MIT press, Cambridge, Ma.
+\newblock 1990
+\bibitem{pereira87}
+\newblock Fernando C.N. Pereira and Stuart M. Shieber
+\newblock Prolog and Natural Language analysis
+\newblock CSLI lecture notes no. 10
+\newblock Stanford, CA
+\newblock 1987
+\end{thebibliography}
+
+\end{document}
+*/

@@ -1,3 +1,0 @@
-read_line :-
-    get0(C),
-    
